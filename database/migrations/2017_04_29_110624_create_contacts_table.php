@@ -19,7 +19,7 @@ class CreateContactsTable extends Migration
             $table->string('name');
             $table->string('icon');
             $table->string('link')->nullable();
-            $table->boolean('isActive')->default(false);
+            $table->boolean('isActive')->nullable()->default(false);
             $table->timestamps();
         });
     }

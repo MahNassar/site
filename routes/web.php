@@ -11,12 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+//Route::get('/', function () {
+//    return view('index');
+//});
 
 
-
+Route::get('/', 'MainController@home');
 
 
 Auth::routes();
@@ -37,3 +37,15 @@ Route::resource('projects', 'ProjectController');
 Route::resource('abouts', 'AboutController');
 
 Route::resource('products', 'ProductController');
+
+Route::resource('blogs', 'BlogController');
+
+Route::resource('contacts', 'ContactController');
+
+Route::resource('orders', 'OrderController');
+
+Route::resource('quotes', 'QuoteController');
+
+Route::resource('services', 'ServiceController');
+
+Route::resource('sliders', 'SliderController');

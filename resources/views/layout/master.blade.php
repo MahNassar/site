@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mine - Creative Template</title>
-    <meta name="author" content="mottsco">
+    <title>EMS - Egyptian Mining Sources</title>
     <meta name="description" content="Creative Agency & Portfolio HTML Template">
     <meta name="keywords" content="mine, creatve, portfolio, html, template, carousel, theme, agency, html5">
     <link href="https://fonts.googleapis.com/css?family=Dosis:400,200,300,500,600,700,800" rel="stylesheet"
@@ -69,7 +68,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="logo_sect">
-                    <a href="index.html" class="logo" title=""><img src="{{url('public/images/logo.png')}}"
+                    <a href="{{url('/')}}" class="logo" title=""><img src="{{url('public/images/ems-logo.png')}}"
                                                                    class="mine-logo" alt=""></a>
 
                 </div>
