@@ -28,7 +28,7 @@
                                      data-elementdelay="0.1"
                                      data-endelementdelay="0.1"
                                      data-endspeed="300"
-                                     data-captionhidden="on" style="font-size: 60px"> {{str_limit($slider->title, 20)}}
+                                     data-captionhidden="on" style="font-size: 30px;"> {{str_limit($slider->title, 30)}}
                                 </div>
 
 
@@ -45,7 +45,7 @@
                                      data-elementdelay="0.1"
                                      data-endelementdelay="0.1"
                                      data-endspeed="300"
-                                     data-captionhidden="on">{{str_limit($slider->abstract, 80)}} <!-- 55 chars -->
+                                     data-captionhidden="on" style="font-size: 23px">{{str_limit($slider->abstract, 80)}}
                                 </div>
                             </li>
                         @endforeach

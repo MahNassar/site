@@ -1,13 +1,13 @@
 <!-- Title Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('title', 'Title:') !!}
-    {!! Form::text('title', null, ['class' => 'form-control', 'maxlength'=>60]) !!}
+    {!! Form::text('title', null, ['class' => 'form-control', 'maxlength'=>30]) !!}
 </div>
 
 <!-- Abstract Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('abstract', 'Abstract:') !!}
-    {!! Form::text('abstract', null, ['class' => 'form-control']) !!}
+    {!! Form::text('abstract', null, ['class' => 'form-control', 'maxlength'=>80]) !!}
 </div>
 
 <!-- Image Field -->
