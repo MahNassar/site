@@ -5,7 +5,7 @@
     <div class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-md-2 col-sm-4">
+                <div class="col-md-4 col-sm-4">
                     <div class="footer-contact">
                         <h3>Contact details</h3>
                         <div class="icon_box">
@@ -35,10 +35,10 @@
                     </div>
                 </div>
 
-                <div class="col-md-3 col-sm-4">
+                <div class="col-md-4 col-sm-4">
                     <div class="footer-contact">
                         <h3>recent post</h3>
-                        <ul class="recent_posts">
+                        <ul class="recent_posts" style="margin-left: -70px">
                             <li>
                                 <div class="recent_posts_content">
                                     <img src="images/portfolio/1.jpg" alt="">
@@ -73,7 +73,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-2 col-sm-4">
+                <div class="col-md-4 col-sm-4">
                     <div class="footer-contact">
                         <h3>useful links</h3>
                         <ul class="footer-links">
@@ -88,80 +88,6 @@
                     </div>
                 </div>
 
-                <div class="col-md-2 col-sm-6">
-                    <div class="footer-contact">
-                        <h3>popular tags</h3>
-                        <ul class="tags">
-                            <li><a href="index.html#" class="btn btn-hover">food</a></li>
-                            <li><a href="index.html#" class="btn btn-hover">people</a></li>
-                            <li><a href="index.html#" class="btn btn-hover">travel</a></li>
-                            <li><a href="index.html#" class="btn btn-hover">videos</a></li>
-                            <li><a href="index.html#" class="btn btn-hover">music</a></li>
-                            <li><a href="index.html#" class="btn btn-hover">nature</a></li>
-                            <li><a href="index.html#" class="btn btn-hover">art</a></li>
-                            <li><a href="index.html#" class="btn btn-hover">science</a></li>
-                            <li><a href="index.html#" class="btn btn-hover">entertain</a></li>
-                            <li><a href="index.html#" class="btn btn-hover">songs</a></li>
-                            <li><a href="index.html#" class="btn btn-hover">code</a></li>
-                            <li><a href="index.html#" class="btn btn-hover">blog</a></li>
-                            <li><a href="index.html#" class="btn btn-hover">learn</a></li>
-                            <li><a href="index.html#" class="btn btn-hover">portfolio</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6">
-                    <div class="footer-contact lightbox">
-                        <h3>instagram</h3>
-                        <ul class="instagram-widget">
-                            <li>
-                                <a href="images/portfolio/1.jpg" class="image-wrap">
-                                    <img alt="" src="images/portfolio/1.jpg">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="images/portfolio/2.jpg" class="image-wrap">
-                                    <img alt="" src="images/portfolio/2.jpg">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="images/portfolio/3.jpg" class="image-wrap">
-                                    <img alt="" src="images/portfolio/3.jpg">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="images/portfolio/4.jpg" class="image-wrap">
-                                    <img alt="" src="images/portfolio/4.jpg">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="images/portfolio/5.jpg" class="image-wrap">
-                                    <img alt="" src="images/portfolio/5.jpg">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="images/portfolio/6.jpg" class="image-wrap">
-                                    <img alt="" src="images/portfolio/6.jpg">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="images/portfolio/7.jpg" class="image-wrap">
-                                    <img alt="" src="images/portfolio/7.jpg">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="images/portfolio/8.jpg" class="image-wrap">
-                                    <img alt="" src="images/portfolio/8.jpg">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="images/portfolio/9.jpg" class="image-wrap">
-                                    <img alt="" src="images/portfolio/9.jpg">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -169,7 +95,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <p>Copyright&nbsp;©&nbsp;2015. Mine. Designed with <i class="fa fa-heart"></i></p>
+                    <p>Copyright&nbsp;©&nbsp;2017. EMS.</p>
                 </div>
                 <div class="col-md-6">
                     <div class="social-icons pull-right">
