@@ -12,7 +12,6 @@
             <td>{!! $blog->title !!}</td>
             <td>{!! $blog->abstract !!}</td>
             <td>{!! $blog->topic !!}</td>
-            <td>{!! $blog->image !!}</td>
             <td>
                 {!! Form::open(['route' => ['blogs.destroy', $blog->id], 'method' => 'delete']) !!}
                 <div class='btn-group'>
