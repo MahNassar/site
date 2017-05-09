@@ -63,7 +63,7 @@
 
 
 <!--================= Start Navigation ==================-->
-
+@include('layout.header')
 <!--================= End Navigation ==================-->
 
 

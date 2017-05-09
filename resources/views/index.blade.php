@@ -1,7 +1,5 @@
 @extends('layout.master')
 @section('content')
-    @include('layout.header')
-    @include('flash::message')
     <!--================= Start Revolution Slider ==================-->
     <div class="home-slider">
 
