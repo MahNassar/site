@@ -27,6 +27,22 @@ class ProductController extends AppBaseController
      * @param Request $request
      * @return Response
      */
+
+    public function getProducts()
+    {
+        $products = $this->productRepository->all();
+        return view('website.products')
+            ->with('products', $products);
+    }
+
+    public function getProduct($id)
+    {
+        $product = $this->productRepository->findWithoutFail($id);
+
+        return view('website.product')
+            ->with('product', $product);
+    }
+
     public function index(Request $request)
     {
         $this->productRepository->pushCriteria(new RequestCriteria($request));
@@ -118,7 +134,7 @@ class ProductController extends AppBaseController
     /**
      * Update the specified Product in storage.
      *
-     * @param  int              $id
+     * @param  int $id
      * @param UpdateProductRequest $request
      *
      * @return Response

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateAboutRequest;
 use App\Http\Requests\UpdateAboutRequest;
+use App\Models\Team;
 use App\Repositories\AboutRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
@@ -27,6 +28,12 @@ class AboutController extends AppBaseController
      * @param Request $request
      * @return Response
      */
+    public function getAbout(){
+        $abouts = $this->aboutRepository->first();
+        $teamItems = Team::all();
+       return view('website.about')->with('about',$abouts)->with('teamItems',$teamItems);
+    }
+
     public function index(Request $request)
     {
         $this->aboutRepository->pushCriteria(new RequestCriteria($request));
