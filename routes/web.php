@@ -49,3 +49,9 @@ Route::resource('quotes', 'QuoteController');
 Route::resource('services', 'ServiceController');
 
 Route::resource('sliders', 'SliderController');
+
+// website routes
+Route::get('/inquire_order', 'OrderController@order');
+Route::post('/request_order', 'OrderController@requestOrder');
+
+Route::get('/services', 'ServiceController@getServices');

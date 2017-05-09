@@ -19,7 +19,7 @@ class CreateOrdersTable extends Migration
             $table->string('name');
             $table->string('phone')->nullable();
             $table->string('mobile')->nullable();
-            $table->string('email')->unique();
+            $table->string('email');
             $table->string('item_name');
             $table->string('quantity');
             $table->string('item_size');

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateOrderRequest;
 use App\Http\Requests\UpdateOrderRequest;
+use App\Models\Order;
 use App\Repositories\OrderRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
@@ -151,5 +152,34 @@ class OrderController extends AppBaseController
         Flash::success('Order deleted successfully.');
 
         return redirect(route('orders.index'));
+    }
+
+    public function order()
+    {
+        return view('orders.request_order');
+    }
+
+    public function requestOrder(CreateOrderRequest $request)
+    {
+        $username = $request->get('username');
+        $phone = $request->get('phone');
+        $landline = $request->get('landline');
+        $email = $request->get('email');
+        $product = $request->get('product');
+        $quantity = $request->get('quantity');
+        $size = $request->get('size');
+        $notes = $request->get('notes');
+
+        $order = new Order();
+        $order->name = $username;
+        $order->phone = $phone;
+        $order->mobile = $landline;
+        $order->email = $email;
+        $order->item_name = $product;
+        $order->quantity = $quantity;
+        $order->item_size = $size;
+        $order->notes = $notes;
+        $order->save();
+        return view('orders.request_order');
     }
 }
