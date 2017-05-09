@@ -53,5 +53,5 @@ Route::resource('sliders', 'SliderController');
 // website routes
 Route::get('/inquire_order', 'OrderController@order');
 Route::post('/request_order', 'OrderController@requestOrder');
-
 Route::get('/services', 'ServiceController@getServices');
+Route::get('/services/{id}', 'ServiceController@showService');

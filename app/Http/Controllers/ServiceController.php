@@ -172,8 +172,19 @@ class ServiceController extends AppBaseController
 
     public function getServices(Request $request)
     {
-        $allServices = Service::orderBy('id');
+        $allServices = Service::orderBy('id')->take(3)->get();
         return view('services.allservices')
             ->with('services', $allServices);
+    }
+
+    public function showService($id)
+    {
+        $service = $this->serviceRepository->findWithoutFail($id);
+
+        if (empty($service)) {
+            return redirect(route('services.allservices'));
+        }
+
+        return view('services.show_service')->with('service', $service);
     }
 }
