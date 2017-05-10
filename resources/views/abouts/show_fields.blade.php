@@ -32,5 +32,7 @@
 <!-- Image Field -->
 <div class="form-group">
     {!! Form::label('image', 'Image:') !!}
-    <img height="200" width="200" src="{{url('public/images/'.$about->image)}}">
+    @if($about->image)
+        <img height="100px" width="100px" src="{{url('public/images/'.$about->image)}}">
+    @endif
 </div>

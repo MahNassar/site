@@ -55,14 +55,15 @@ class TeamController extends AppBaseController
      */
     public function store(CreateTeamRequest $request)
     {
-        $file = $request->file('image');
-        $image = $request->file('image');
-        $imageName = time() . '.' . $image->getClientOriginalExtension();
-        $destinationPath = public_path('/images/team');
-        $image->move($destinationPath, $imageName);
-        $photo = $imageName;
         $input = $request->all();
-        $input['photo'] = $photo;
+        $image = $request->file('image');
+        if ($image){
+            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            $destinationPath = public_path('/images/team');
+            $image->move($destinationPath, $imageName);
+            $photo = $imageName;
+            $input['photo'] = $photo;
+        }
 
         $team = $this->teamRepository->create($input);
 
@@ -128,13 +129,15 @@ class TeamController extends AppBaseController
 
             return redirect(route('teams.index'));
         }
-        $image = $request->file('image');
-        $imageName = time() . '.' . $image->getClientOriginalExtension();
-        $destinationPath = public_path('/images/team');
-        $image->move($destinationPath, $imageName);
-        $photo = $imageName;
         $input = $request->all();
-        $input['photo'] = $photo;
+        $image = $request->file('image');
+        if ($image){
+            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            $destinationPath = public_path('/images/team');
+            $image->move($destinationPath, $imageName);
+            $photo = $imageName;
+            $input['photo'] = $photo;
+        }
 
         $team = $this->teamRepository->update($input, $id);
 

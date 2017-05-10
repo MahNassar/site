@@ -4,12 +4,6 @@
     <p>{!! $team->name !!}</p>
 </div>
 
-<!-- Photo Field -->
-<div class="form-group">
-    {!! Form::label('photo', 'Photo:') !!}
-    <img src="{{url('public/images/team/'.$team->photo)}}" height="100px" width="100px">
-</div>
-
 <!-- Biography Field -->
 <div class="form-group">
     {!! Form::label('biography', 'Biography:') !!}
@@ -20,6 +14,14 @@
 <div class="form-group">
     {!! Form::label('position', 'Position:') !!}
     <p>{!! $team->position !!}</p>
+</div>
+
+<!-- Photo Field -->
+<div class="form-group">
+    {!! Form::label('photo', 'Photo:') !!}
+    @if($team->photo)
+        <img src="{{url('public/images/team/'.$team->photo)}}" height="100px" width="100px">
+    @endif
 </div>
 
 

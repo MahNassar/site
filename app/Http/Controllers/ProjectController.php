@@ -58,11 +58,13 @@ class ProjectController extends AppBaseController
         $input = $request->all();
         $files = $request->file('images');
         $images = '';
-        foreach ($files as $file) {
-            $imageName = time() . '_' . $file->getClientOriginalName() . '.' . $file->getClientOriginalExtension();
-            $destinationPath = public_path('/images/projects');
-            if ($file->move($destinationPath, $imageName)) {
-                $images .= $imageName . "\n";
+        if ($files){
+            foreach ($files as $file) {
+                $imageName = time() . '_' . $file->getClientOriginalName() . '.' . $file->getClientOriginalExtension();
+                $destinationPath = public_path('/images/projects');
+                if ($file->move($destinationPath, $imageName)) {
+                    $images .= $imageName . "\n";
+                }
             }
         }
         $input['images'] = $images;
@@ -133,14 +135,17 @@ class ProjectController extends AppBaseController
         $input = $request->all();
         $files = $request->file('images');
         $images = '';
-        foreach ($files as $file) {
-            $imageName = time() . '_' . $file->getClientOriginalName() . '.' . $file->getClientOriginalExtension();
-            $destinationPath = public_path('/images/projects');
-            if ($file->move($destinationPath, $imageName)) {
-                $images .= $imageName . "\n";
+        if ($files){
+            foreach ($files as $file) {
+                $imageName = time() . '_' . $file->getClientOriginalName() . '.' . $file->getClientOriginalExtension();
+                $destinationPath = public_path('/images/projects');
+                if ($file->move($destinationPath, $imageName)) {
+                    $images .= $imageName . "\n";
+                }
             }
+            $input['images'] = $images;
         }
-        $input['images'] = $images;
+
 
         $project = $this->projectRepository->update($input, $id);
 
