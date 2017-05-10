@@ -64,11 +64,14 @@ class AboutController extends AppBaseController
     {
         $input = $request->all();
         $image = $request->file('image');
-        $imageName = time() . '.' . $image->getClientOriginalExtension();
-        $destinationPath = public_path('/images');
-        $image->move($destinationPath, $imageName);
-        $photo = $imageName;
-        $input['image'] = $photo;
+        if ($image){
+            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            $destinationPath = public_path('/images');
+            $image->move($destinationPath, $imageName);
+            $photo = $imageName;
+            $input['image'] = $photo;
+        }
+
 
         $about = $this->aboutRepository->create($input);
 
@@ -136,11 +139,14 @@ class AboutController extends AppBaseController
         }
         $input = $request->all();
         $image = $request->file('image');
-        $imageName = time() . '.' . $image->getClientOriginalExtension();
-        $destinationPath = public_path('/images');
-        $image->move($destinationPath, $imageName);
-        $photo = $imageName;
-        $input['image'] = $photo;
+        if ($image){
+            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            $destinationPath = public_path('/images');
+            $image->move($destinationPath, $imageName);
+            $photo = $imageName;
+            $input['image'] = $photo;
+        }
+
 
         $about = $this->aboutRepository->update($input, $id);
 

@@ -12,14 +12,15 @@
             <div class="table">
                 <div class="inner">
                     <div class="page-header-content">
-                        <h1 class="page-header-title wow fadeInUp" data-wow-delay="0.10s">About</h1>
+                        <h1 class="page-header-title wow fadeInUp" data-wow-delay="0.10s">
+                            {{$about->company_slogan}}
+                        </h1>
                         <div class="underline"><i class="fa fa-circle-thin"></i></div>
                     </div>
                 </div>
             </div>
             <ol class="breadcrumb">
-                <li><a href="about.html#">Home</a></li>
-                <li><a href="about.html#">Page</a></li>
+                <li><a href="{{url('/')}}">Home</a></li>
                 <li class="active">About</li>
             </ol>
         </div>
@@ -47,52 +48,52 @@
 
 
     <!--================= Start Fun Fact Section ==================-->
-    <section>
-        <div class="overlay"></div>
-        <div class="background-overlay" style="background-image: url('{{url('public/images/fact_bg.jpg')}}');"></div>
-        <div id="facts">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3 col-sm-6 col-xs-6 col-12 text-center">
-                        <div class="fact-item">
-                            <div class="fact-number" data-count="92">
-                                <div class="icon-wine"></div>
-                                <h3 class="fact-desc">Products</h3>
-                                <div class="count-focus">92</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-6 col-12 text-center">
-                        <div class="fact-item">
-                            <div class="fact-number" data-count="231">
-                                <div class="icon-bike"></div>
-                                <h3 class="fact-desc"> Projects</h3>
-                                <div class="count-focus">231</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-6 col-12 text-center">
-                        <div class="fact-item">
-                            <div class="fact-number" data-count="414">
-                                <div class="icon-happy"></div>
-                                <h3 class="fact-desc">Clients</h3>
-                                <div class="count-focus">414</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-6 col-12 text-center">
-                        <div class="fact-item">
-                            <div class="fact-number" data-count="543">
-                                <div class="icon-trophy"></div>
-                                <h3 class="fact-desc">Services</h3>
-                                <div class="count-focus">543</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    {{--<section>--}}
+        {{--<div class="overlay"></div>--}}
+        {{--<div class="background-overlay" style="background-image: url('{{url('public/images/fact_bg.jpg')}}');"></div>--}}
+        {{--<div id="facts">--}}
+            {{--<div class="container">--}}
+                {{--<div class="row">--}}
+                    {{--<div class="col-md-3 col-sm-6 col-xs-6 col-12 text-center">--}}
+                        {{--<div class="fact-item">--}}
+                            {{--<div class="fact-number" data-count="92">--}}
+                                {{--<div class="icon-wine"></div>--}}
+                                {{--<h3 class="fact-desc">Products</h3>--}}
+                                {{--<div class="count-focus">92</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    {{--<div class="col-md-3 col-sm-6 col-xs-6 col-12 text-center">--}}
+                        {{--<div class="fact-item">--}}
+                            {{--<div class="fact-number" data-count="231">--}}
+                                {{--<div class="icon-bike"></div>--}}
+                                {{--<h3 class="fact-desc"> Projects</h3>--}}
+                                {{--<div class="count-focus">231</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    {{--<div class="col-md-3 col-sm-6 col-xs-6 col-12 text-center">--}}
+                        {{--<div class="fact-item">--}}
+                            {{--<div class="fact-number" data-count="414">--}}
+                                {{--<div class="icon-happy"></div>--}}
+                                {{--<h3 class="fact-desc">Clients</h3>--}}
+                                {{--<div class="count-focus">414</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    {{--<div class="col-md-3 col-sm-6 col-xs-6 col-12 text-center">--}}
+                        {{--<div class="fact-item">--}}
+                            {{--<div class="fact-number" data-count="543">--}}
+                                {{--<div class="icon-trophy"></div>--}}
+                                {{--<h3 class="fact-desc">Services</h3>--}}
+                                {{--<div class="count-focus">543</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</section>--}}
     <!--================= End Fun Fact Section ==================-->
 
 
@@ -174,24 +175,5 @@
             </div>
         </div>
     </section>
-    <!--================= End Team Section ==================-->
-
-
-    <section>
-        <div class="background-overlay work-with-us-overlay"
-             style="background-image: url('{{url('public/images/talk.jpg')}}')"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-sm-12 text-center">
-                    <div class="work-with-us">
-                        <h2>Have Project in mind</h2>
-                        <p>Try to be ahead of the curve on trending design and development.</p>
-                        <a href="#" class="send_btn">Lets start</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
 
 @endsection

@@ -7,7 +7,7 @@
 <!-- Photo Field -->
 <div class="form-group">
     {!! Form::label('photo', 'Photo:') !!}
-    <img src="{{url('public/images/team/'.$team->photo)}}">
+    <img src="{{url('public/images/team/'.$team->photo)}}" height="100px" width="100px">
 </div>
 
 <!-- Biography Field -->
