@@ -209,7 +209,7 @@
 
     <!--================= Start testomonials Section ==================-->
 
-    @if(isset($testimonials) && $testimonials->count() > 0)
+    @if(isset($testimonials) && $testimonials->count() > 0 && $qoutes == true)
         <section>
             <div class="overlay">
                 <div class="background-overlay overlay_opacity_20" style="background-image: url(images/bg_testomonials.jpg);"></div>
@@ -235,7 +235,19 @@
             </div>
         </section>
     @else
-        <br>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center title">
+                        <h2>Your Quote For Us</h2>
+                        <div class="underline"><i class="fa fa-circle-thin"></i></div>
+                    </div>
+                </div>
+                <form>
+                    sdfdf
+                </form>
+            </div>
+        </section>
     @endif
 
     <!--================= End testomonials Section ==================-->

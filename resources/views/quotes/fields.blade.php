@@ -16,12 +16,6 @@
     {!! Form::textarea('quote', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Ip Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('ip', 'Ip:') !!}
-    {!! Form::text('ip', null, ['class' => 'form-control']) !!}
-</div>
-
 <!-- Isactive Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('isActive', 'Isactive:') !!}

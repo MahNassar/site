@@ -20,7 +20,7 @@ class CreateQuotesTable extends Migration
             $table->string('position')->nullable();
             $table->text('quote')->nullable();
             $table->string('ip')->nullable();
-            $table->boolean('isActive')->nullable()->default(false);
+            $table->boolean('isActive')->nullable();
             $table->timestamps();
         });
     }
