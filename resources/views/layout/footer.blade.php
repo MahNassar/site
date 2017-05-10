@@ -77,12 +77,12 @@
                     <div class="footer-contact">
                         <h3>useful links</h3>
                         <ul class="footer-links">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="http://mine.motts.co/services.html">Services</a></li>
-                            <li><a href="portfolio.html">Work</a></li>
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="{{url('/')}}">Home</a></li>
+                            <li><a href="{{url('about')}}">About</a></li>
+                            <li><a href="{{url('services')}}">Services</a></li>
+                            <li><a href="{{url('inquire_order')}}">Order Now</a></li>
+                            <li><a href="{{url('blog')}}">Blog</a></li>
+                            <li><a href="{{url('contact')}}">Contact</a></li>
                         </ul>
 
                     </div>
