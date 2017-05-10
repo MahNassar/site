@@ -14,6 +14,7 @@
 <div class="form-group col-sm-12 col-lg-12">
     {!! Form::label('images', 'Images:') !!}
     {!! Form::file('images[]', array('multiple'=>true)) !!}
+    <span style="color:red;">You Can Upload Only Four Images</span>
 </div>
 
 <!-- Submit Field -->

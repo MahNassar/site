@@ -17,7 +17,7 @@ class MainController extends Controller
     {
         $sliders = Slider::where('isActive', 1)->orderBy('id')->get();
         $products = Product::orderBy('id')->take(3)->get();
-        $members = Team::orderBy('id')->get();
+        $members = Team::orderBy('id')->take(4)->get();
         $testimonials = Quote::where('isActive', 1)->orderBy('id')->get();
         $projects = Project::orderBy('id')->take(3)->get();
         $servives = Service::orderBy('id')->take(3)->get();

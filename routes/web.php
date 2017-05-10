@@ -60,3 +60,6 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin'], function () {
 
     Route::resource('sliders', 'SliderController');
 });
+
+
+Route::resource('seos', 'SeoController');

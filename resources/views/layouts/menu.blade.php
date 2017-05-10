@@ -38,3 +38,7 @@
     <a href="{!! route('sliders.index') !!}"><i class="fa fa-edit"></i><span>Sliders</span></a>
 </li>
 
+<li class="{{ Request::is('seos*') ? 'active' : '' }}">
+    <a href="{!! route('seos.index') !!}"><i class="fa fa-edit"></i><span>Seos</span></a>
+</li>
+

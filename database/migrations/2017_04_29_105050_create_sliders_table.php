@@ -20,7 +20,7 @@ class CreateSlidersTable extends Migration
             $table->string('title');
             $table->string('abstract')->nullable();
             $table->string('image');
-            $table->boolean('isActive')->nullable()->default(false);
+            $table->boolean('isActive')->nullable();
             $table->timestamps();
         });
     }

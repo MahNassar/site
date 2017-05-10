@@ -15,7 +15,6 @@
             <td>{!! $service->abstract !!}</td>
             <td>{!! $service->description !!}</td>
             <td>
-                {!! Form::label('image', 'Image:') !!}
                 @if($service->image !="")
                     <img height="50" width="50" src="{{url('public/images/services/'.$service->image)}}">
                 @endif

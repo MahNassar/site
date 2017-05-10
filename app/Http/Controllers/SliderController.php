@@ -55,15 +55,15 @@ class SliderController extends AppBaseController
      */
     public function store(CreateSliderRequest $request)
     {
-        $file = $request->file('image');
-        $image = $request->file('image');
-        $imageName = time() . '.' . $image->getClientOriginalExtension();
-        $destinationPath = public_path('/images/slider');
-        $image->move($destinationPath, $imageName);
-        $photo = $imageName;
         $input = $request->all();
-        $input['image'] = $photo;
-
+        $image = $request->file('image');
+        if ($image){
+            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            $destinationPath = public_path('/images/slider');
+            $image->move($destinationPath, $imageName);
+            $photo = $imageName;
+            $input['image'] = $photo;
+        }
         $slider = $this->sliderRepository->create($input);
 
         Flash::success('Slider saved successfully.');
@@ -128,15 +128,15 @@ class SliderController extends AppBaseController
 
             return redirect(route('sliders.index'));
         }
-
-        $image = $request->file('image');
-        $imageName = time() . '.' . $image->getClientOriginalExtension();
-        $destinationPath = public_path('/images/slider');
-        $image->move($destinationPath, $imageName);
-        $photo = $imageName;
         $input = $request->all();
-        $input['image'] = $photo;
-
+        $image = $request->file('image');
+        if ($image){
+            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            $destinationPath = public_path('/images/slider');
+            $image->move($destinationPath, $imageName);
+            $photo = $imageName;
+            $input['image'] = $photo;
+        }
         $slider = $this->sliderRepository->update($input, $id);
 
         Flash::success('Slider updated successfully.');

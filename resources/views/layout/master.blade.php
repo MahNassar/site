@@ -24,8 +24,8 @@
     <link rel="stylesheet" href="{{url('public/css/owl.theme.css')}}">
     <link href="{{url('public/css/style.css')}}" rel="stylesheet">
     <!-- FAVICON FILES -->
-    <link rel="shortcut icon" href="{{url('public/images/favicon.ico')}}" type="image/x-icon">
-    <link rel="icon" href="{{url('public/images/favicon.ico')}}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{url('public/images/ems-favicon.png')}}" type="image/x-icon">
+    <link rel="icon" href="{{url('public/images/ems-favicon.png')}}" type="image/x-icon">
 
     <script>
         (function (i, s, o, g, r, a, m) {

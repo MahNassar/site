@@ -1,9 +1,3 @@
-<!-- Id Field -->
-<div class="form-group">
-    {!! Form::label('id', 'Id:') !!}
-    <p>{!! $blog->id !!}</p>
-</div>
-
 <!-- Title Field -->
 <div class="form-group">
     {!! Form::label('title', 'Title:') !!}
@@ -25,18 +19,9 @@
 <!-- Image Field -->
 <div class="form-group">
     {!! Form::label('image', 'Image:') !!}
-    <p>{!! $blog->image !!}</p>
+    @if($blog->image)
+        <img height="100" width="100" src="{{url('public/images/blog/'.$blog->image)}}">
+    @endif
 </div>
 
-<!-- Created At Field -->
-<div class="form-group">
-    {!! Form::label('created_at', 'Created At:') !!}
-    <p>{!! $blog->created_at !!}</p>
-</div>
-
-<!-- Updated At Field -->
-<div class="form-group">
-    {!! Form::label('updated_at', 'Updated At:') !!}
-    <p>{!! $blog->updated_at !!}</p>
-</div>
 
