@@ -180,6 +180,6 @@ class OrderController extends AppBaseController
         $order->item_size = $size;
         $order->notes = $notes;
         $order->save();
-        return view('orders.request_order');
+        return view('index');
     }
 }
