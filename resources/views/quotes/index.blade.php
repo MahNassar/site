@@ -19,5 +19,8 @@
             </div>
         </div>
     </div>
+    <center>
+        <?php echo $quotes->render(); ?>
+    </center>
 @endsection
 

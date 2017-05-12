@@ -31,7 +31,7 @@ class OrderController extends AppBaseController
     public function index(Request $request)
     {
         $this->orderRepository->pushCriteria(new RequestCriteria($request));
-        $orders = $this->orderRepository->all();
+        $orders = $this->orderRepository->paginate(20);
 
         return view('orders.index')
             ->with('orders', $orders);
@@ -180,6 +180,6 @@ class OrderController extends AppBaseController
         $order->item_size = $size;
         $order->notes = $notes;
         $order->save();
-        return view('index');
+        return redirect('/');
     }
 }

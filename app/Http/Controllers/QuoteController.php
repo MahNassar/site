@@ -30,7 +30,7 @@ class QuoteController extends AppBaseController
     public function index(Request $request)
     {
         $this->quoteRepository->pushCriteria(new RequestCriteria($request));
-        $quotes = $this->quoteRepository->all();
+        $quotes = $this->quoteRepository->paginate(20);
 
         return view('quotes.index')
             ->with('quotes', $quotes);

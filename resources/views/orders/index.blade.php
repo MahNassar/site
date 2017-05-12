@@ -19,5 +19,8 @@
             </div>
         </div>
     </div>
+    <center>
+        <?php echo $orders->render(); ?>
+    </center>
 @endsection
 

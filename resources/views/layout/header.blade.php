@@ -14,7 +14,7 @@
                         </li>
 
                         <li class="scroll has-child">
-                            <a href="{{url('inquire_order')}}">Order Now</a>
+                            <a href="{{url('products')}}">products</a>
                         </li>
 
                         <li class="scroll has-child">
@@ -22,11 +22,11 @@
                         </li>
 
                         <li class="scroll has-child">
-                            <a href="{{url('products')}}">products</a>
+                            <a href="{{url('blog')}}">blog</a>
                         </li>
 
                         <li class="scroll has-child">
-                            <a href="{{url('blog')}}">blog</a>
+                            <a href="{{url('inquire_order')}}">Order Now</a>
                         </li>
 
                         <li class="scroll has-child">
