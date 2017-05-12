@@ -1,7 +1,9 @@
 <!-- Type Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('type', 'Type:') !!}
-    {!! Form::text('type', null, ['class' => 'form-control']) !!}
+    {!! Form::select('type', array('production' => 'production',
+        'quality_control' => 'quality_control',
+        'logistics' => 'logistics'), '', ['class'=>'form-control']) !!}
 </div>
 
 <!-- Title Field -->

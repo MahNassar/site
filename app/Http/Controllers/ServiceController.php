@@ -56,14 +56,16 @@ class ServiceController extends AppBaseController
      */
     public function store(CreateServiceRequest $request)
     {
-        $file = $request->file('image');
-        $image = $request->file('image');
-        $imageName = time() . '.' . $image->getClientOriginalExtension();
-        $destinationPath = public_path('/images/services');
-        $image->move($destinationPath, $imageName);
-        $photo = $imageName;
         $input = $request->all();
-        $input['image'] = $photo;
+        $image = $request->file('image');
+        if ($image){
+            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            $destinationPath = public_path('/images/services');
+            $image->move($destinationPath, $imageName);
+            $photo = $imageName;
+            $input['image'] = $photo;
+        }
+
 
         $service = $this->serviceRepository->create($input);
 
@@ -129,14 +131,16 @@ class ServiceController extends AppBaseController
 
             return redirect(route('services.index'));
         }
-
-        $image = $request->file('image');
-        $imageName = time() . '.' . $image->getClientOriginalExtension();
-        $destinationPath = public_path('/images/services');
-        $image->move($destinationPath, $imageName);
-        $photo = $imageName;
         $input = $request->all();
-        $input['image'] = $photo;
+        $image = $request->file('image');
+        if ($image){
+            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            $destinationPath = public_path('/images/services');
+            $image->move($destinationPath, $imageName);
+            $photo = $imageName;
+            $input['image'] = $photo;
+        }
+
 
 
         $service = $this->serviceRepository->update($input, $id);
