@@ -18,6 +18,10 @@
                         </li>
 
                         <li class="scroll has-child">
+                            <a href="{{url('projects')}}">Projects</a>
+                        </li>
+
+                        <li class="scroll has-child">
                             <a href="{{url('services')}}">Services</a>
                         </li>
 

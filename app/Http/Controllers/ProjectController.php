@@ -27,6 +27,18 @@ class ProjectController extends AppBaseController
      * @param Request $request
      * @return Response
      */
+
+    public function getProjects(){
+        $projects = $this->projectRepository->all();
+        return view('website.projects')
+            ->with('projects', $projects);
+    }
+
+    public function getProject($id){
+        $project = $this->projectRepository->findWithoutFail($id);
+        return view('website.project')
+            ->with('project', $project);
+    }
     public function index(Request $request)
     {
         $this->projectRepository->pushCriteria(new RequestCriteria($request));

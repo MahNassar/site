@@ -26,6 +26,8 @@ Route::get('/services', 'ServiceController@getServices');
 Route::get('/services/{id}', 'ServiceController@showService');
 Route::get('/blog', 'BlogController@getBlog');
 Route::get('/blog/articles/{id}', 'BlogController@getArticle');
+Route::get('/projects', 'ProjectController@getProjects');
+Route::get('/projects/{id}', 'ProjectController@getProject');
 
 
 Auth::routes();
