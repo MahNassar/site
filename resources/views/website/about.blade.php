@@ -157,10 +157,13 @@
                         <div class="col-md-3 col-sm-4 col-xs-6 col-12">
                             <div class="team_block">
                                 <div class="team_item">
-                                    <img src="{{url('public/images/team/'.$item->photo)}}" alt="Alt">
-                                    <div class="profile_links">
-                                        <p>{{str_limit($item->biography, 200)}}</p>
-                                    </div>
+                                    @if($item->photo)
+                                        <img src="{{url('public/images/team/'.$item->photo)}}"
+                                             alt="{{$item->name}}" style="width: 300px;height: 250px;">
+                                    @else
+                                        <img src="{{url('public/images/avatar1.jpg')}}"
+                                             alt="{{$item->name}}" style="width: 300px;height: 250px;">
+                                    @endif
                                 </div>
                                 <div class="team_name">
                                     <h3>{{$item->name}}</h3>

@@ -5,24 +5,23 @@
     <section class="page_section nopadding">
         <div class="overlay">
             <div class="background-overlay overlay_opacity_15 overlay_grayscale"
-                 style="background-image: url('{{url('public/images/blog/blog_bg.jpg')}}');">
+                 style="background-image: url('{{url('public/images/projects.jpg')}}');">
             </div>
         </div>
         <div class="page-header text-center">
             <div class="table">
                 <div class="inner">
                     <div class="page-header-content">
-                        <h1 class="page-header-title wow fadeInUp" data-wow-delay="0.10s">Products</h1>
-                        <h2 class="page-header-subtitle wow fadeInUp" data-wow-delay="0.20s">WE SHARE OUR BEST
-                            Products</h2>
+                        <h1 class="page-header-title wow fadeInUp" data-wow-delay="0.10s">Projects</h1>
+                        <h2 class="page-header-subtitle wow fadeInUp" data-wow-delay="0.20s">WE SHARE OUR PROJECTS</h2>
                         <div class="underline"><i class="fa fa-circle-thin"></i></div>
                     </div>
                 </div>
             </div>
 
             <ol class="breadcrumb">
-                <li><a href="#">Home</a></li>
-                <li><a href="">Products</a></li>
+                <li><a href="{{url('')}}">Home</a></li>
+                <li class="active">Projects</li>
             </ol>
         </div>
     </section>
@@ -46,7 +45,8 @@
                                 <article class="entry-item">
                                     <div class="entry-img">
                                         <a href="{{url('').'/projects/'.$project->id}}">
-                                            <img src="{{url('public/images/projects/' . $images[0])}}" alt="Post Image"/>
+                                            <img src="{{url('public/images/projects/' . $images[0])}}"
+                                                 alt="Post Image" style="width: 400px;height: 270px;"/>
                                         </a>
                                     </div>
 

@@ -4,7 +4,7 @@
     <section class="page_section nopadding">
         <div class="overlay">
             <div class="background-overlay overlay_opacity_15 overlay_grayscale"
-                 style="background-image: url('{{url('images/contact_head.jpg')}}');">
+                 style="background-image: url('{{url('public/images/contact_head.jpg')}}');">
             </div>
         </div>
         <div class="page-header full text-center">

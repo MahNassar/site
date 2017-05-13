@@ -3,17 +3,20 @@
     <!--================= Start Page Header Section ==================-->
     <section class="page_section nopadding">
         <div class="overlay">
+            <?php
+                $images = explode(PHP_EOL, $product->images);
+            ?>
+
             <div class="background-overlay overlay_opacity_15 overlay_grayscale"
-                 style="background-image: url(images/portfolio/portfolio_single_bg.jpg)">
+                 style="background-image: url({{url('public/images/' . $images[0])}})">
             </div>
         </div>
         <div class="page-header text-center">
             <div class="table">
                 <div class="inner">
                     <div class="page-header-content">
-                        <h1 class="page-header-title wow fadeInUp" data-wow-delay="0.10s">Single work Details</h1>
-                        <h2 class="page-header-subtitle wow fadeInUp" data-wow-delay="0.20s">AN EYE FOR DETAIL MAKES OUR
-                            WORKS EXCELLENT</h2>
+                        <h1 class="page-header-title wow fadeInUp" data-wow-delay="0.10s">Product</h1>
+                        <h2 class="page-header-subtitle wow fadeInUp" data-wow-delay="0.20s">{{$product->title}}</h2>
                         <div class="underline"><i class="fa fa-circle-thin"></i></div>
                     </div>
                 </div>
@@ -21,7 +24,6 @@
             <ol class="breadcrumb">
                 <li><a href="{{url('')}}">Home</a></li>
                 <li><a href="{{url('products')}}">Products</a></li>
-                <li class="active">{{$product->title}}</li>
             </ol>
         </div>
     </section>
@@ -35,11 +37,13 @@
                 <div class="col-md-7">
                     <div class="owl-carousel owl-theme">
                         <?php
-                        $images = explode(PHP_EOL, $product->images);
+                            $images = explode(PHP_EOL, $product->images);
                         ?>
                         @foreach($images as $image)
-                            @if($image !="")
+                            @if($image != "")
                                 <div class="item"><img src="{{url('public/images/' . $image)}}" alt="#"></div>
+                            @else
+                                <img src="{{url('public/images/' . $image)}}">
                             @endif
                         @endforeach
 

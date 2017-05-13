@@ -5,7 +5,7 @@
     <section class="page_section nopadding">
         <div class="overlay">
             <div class="background-overlay overlay_opacity_15 overlay_grayscale"
-                 style="background-image: url('{{url('public/images/blog/blog_bg.jpg')}}');">
+                 style="background-image: url('{{url('public/images/blog/ems-blog.jpg')}}');">
             </div>
         </div>
         <div class="page-header text-center">
@@ -46,7 +46,8 @@
                                 <article class="entry-item">
                                     <div class="entry-img">
                                         <a href="{{url('').'/products/'.$product->id}}">
-                                            <img src="{{url('public/images/' . $images[0])}}" alt="Post Image"/>
+                                            <img src="{{url('public/images/' . $images[0])}}"
+                                                 alt="Post Image" style="width: 400px;height: 270px;"/>
                                         </a>
                                     </div>
 

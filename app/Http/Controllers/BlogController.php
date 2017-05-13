@@ -57,14 +57,16 @@ class BlogController extends AppBaseController
      */
     public function store(CreateBlogRequest $request)
     {
-        $file = $request->file('image');
-        $image = $request->file('image');
-        $imageName = time() . '.' . $image->getClientOriginalExtension();
-        $destinationPath = public_path('/images/blog');
-        $image->move($destinationPath, $imageName);
-        $photo = $imageName;
         $input = $request->all();
-        $input['image'] = $photo;
+        $image = $request->file('image');
+        if ($image)
+        {
+            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            $destinationPath = public_path('/images/blog');
+            $image->move($destinationPath, $imageName);
+            $photo = $imageName;
+            $input['image'] = $photo;
+        }
 
         $blog = $this->blogRepository->create($input);
 
@@ -130,14 +132,16 @@ class BlogController extends AppBaseController
 
             return redirect(route('blogs.index'));
         }
-
-        $image = $request->file('image');
-        $imageName = time() . '.' . $image->getClientOriginalExtension();
-        $destinationPath = public_path('/images/blog');
-        $image->move($destinationPath, $imageName);
-        $photo = $imageName;
         $input = $request->all();
-        $input['image'] = $photo;
+        $image = $request->file('image');
+        if ($image)
+        {
+            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            $destinationPath = public_path('/images/blog');
+            $image->move($destinationPath, $imageName);
+            $photo = $imageName;
+            $input['image'] = $photo;
+        }
 
         $blog = $this->blogRepository->update($input, $id);
 

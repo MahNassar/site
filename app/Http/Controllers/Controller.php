@@ -13,7 +13,7 @@ class Controller extends BaseController
 {
     public function __construct()
     {
-        $latestThreeBlog = Blog::orderBy('id')->take(3)->get();
+        $latestThreeBlog = Blog::orderBy('created_at', 'DESC')->take(3)->select('id', 'title', 'image')->get();
         view()->share('latestBlog', $latestThreeBlog);
         $seo = Seo::all();
         view()->share('seo', $seo);

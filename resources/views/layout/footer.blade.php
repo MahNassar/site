@@ -42,12 +42,20 @@
                             @foreach($latestBlog as $article)
                                 <li>
                                     <div class="recent_posts_content">
-                                        <img src="{{url('public/images/blog/' . $article->image)}}"
-                                             alt="{{$article->title}}">
-                                        <a href="blog-single.html" class="recent-title">{{$article->title}}</a>
+                                        @if($article->image)
+                                            <a href="{{url('/blog/articles').'/'.$article->id}}" class="recent-title">
+                                                <img src="{{url('public/images/blog/' . $article->image)}}"
+                                                    alt="{{$article->title}}" style="width: 50px;height: 45px;">
+                                            </a>
+                                        @else
+                                            <a href="{{url('/blog/articles').'/'.$article->id}}" class="recent-title">
+                                                <img src="{{url('public/images/dashboard.png')}}"
+                                                     alt="{{$article->title}}" style="width: 50px;height: 45px;">
+                                            </a>
+                                        @endif
+                                        <a href="{{url('/blog/articles').'/'.$article->id}}" class="recent-title">{{$article->title}}</a>
                                         <div class="recent_posts_info">
-
-                                            <a href="index.html#">  {{$article->created_at}}</a>
+                                            EMS | {{ date('Y / m / d', strtotime($article->created_at))}}
                                         </div>
                                     </div>
                                 </li>
