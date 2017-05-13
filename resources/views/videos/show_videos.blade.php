@@ -37,7 +37,7 @@
                                 <!-- standard post -->
                                 <article class="entry-item">
                                     <div class="entry-img">
-                                        <iframe width="360" height="230"
+                                        <iframe width="361" height="230"
                                                 src="{{ preg_replace("/\s*[a-zA-Z\/\/:\.]*youtu(be.com\/watch\?v=|.be\/)([a-zA-Z0-9\-_]+)([a-zA-Z0-9\/\*\-\_\?\&\;\%\=\.]*)/i","https://www.youtube.com/embed/$2",$video->url )}}"
                                                 frameborder="0" allowfullscreen></iframe>
                                     </div>
