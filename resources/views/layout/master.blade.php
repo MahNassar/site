@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="{{url('public/css/owl.theme.default.css')}}">
     <link rel="stylesheet" href="{{url('public/css/owl.theme.css')}}">
     <link href="{{url('public/css/style.css')}}" rel="stylesheet">
+    <link href="{{url('public/css/owl.carousel.min.css')}}" rel="stylesheet">
+    <link href="{{url('public/css/owl.theme.default.min.css')}}" rel="stylesheet">
     <!-- FAVICON FILES -->
     <link rel="shortcut icon" href="{{url('public/images/ems-favicon.png')}}" type="image/x-icon">
     <link rel="icon" href="{{url('public/images/ems-favicon.png')}}" type="image/x-icon">
@@ -82,6 +84,7 @@
 <script src="{{url('public/js/plugins.js')}}"></script>
 <script src="{{url('public/js/contact.map.js')}}"></script>
 <script src="{{url('public/js/main.js')}}"></script>
+<script src="{{url('public/js/owl.carousel.min.js')}}"></script>
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
 <!--[if lt IE 10]>
 <script type="text/javascript" src="{{url('public/js/placeholder.js')}}"></script><![endif]-->
@@ -115,5 +118,23 @@
     }
 </script>
 <!--================= End JS sctipts ==================-->
+<script>
+    $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:1
+            },
+            1000:{
+                items:1
+            }
+        }
+    })
+</script>
 </body>
 </html>
