@@ -11,9 +11,8 @@
             <div class="table">
                 <div class="inner">
                     <div class="page-header-content">
-                        <h1 class="page-header-title wow fadeInUp" data-wow-delay="0.10s">Blog</h1>
-                        <h2 class="page-header-subtitle wow fadeInUp" data-wow-delay="0.20s">WE SHARE OUR BEST IDEAS IN
-                            OUR BLOG</h2>
+                        <h1 class="page-header-title wow fadeInUp" data-wow-delay="0.10s">Videos</h1>
+                        <h2 class="page-header-subtitle wow fadeInUp" data-wow-delay="0.20s"></h2>
                         <div class="underline"><i class="fa fa-circle-thin"></i></div>
                     </div>
                 </div>
@@ -21,11 +20,10 @@
 
             <ol class="breadcrumb">
                 <li><a href="{{url('/')}}">Home</a></li>
-                <li class="active">Blog</li>
+                <li class="active">Videos</li>
             </ol>
         </div>
     </section>
-
 
     <section class="type2">
         <div class="container relative">
@@ -34,41 +32,27 @@
                 <div class="col-md-12">
                     <div class="blog-posts-content row">
 
-                        @foreach($articles as $article)
+                        @foreach($videos as $video)
                             <div class="col-md-4 col-sm-6 col-xs-6 col-12 masonry">
                                 <!-- standard post -->
                                 <article class="entry-item">
                                     <div class="entry-img">
-                                        <a href="{{url('/blog/articles').'/'.$article->id}}">
-                                            <img src="{{url('public/images/blog/' . $article->image)}}" alt="{{$article->title}}">
-                                        </a>
+                                        <iframe width="360" height="230"
+                                                src="{{ preg_replace("/\s*[a-zA-Z\/\/:\.]*youtu(be.com\/watch\?v=|.be\/)([a-zA-Z0-9\-_]+)([a-zA-Z0-9\/\*\-\_\?\&\;\%\=\.]*)/i","https://www.youtube.com/embed/$2",$video->url )}}"
+                                                frameborder="0" allowfullscreen></iframe>
                                     </div>
 
                                     <div class="entry">
                                         <div class="entry-head text-center">
                                             <h2 class="entry-title">
-                                                <a href="{{url('/blog/articles').'/'.$article->id}}">
-                                                    {{$article->title}}
-                                                </a>
+                                                    {{$video->title}}
                                             </h2>
-                                            <div class="entry-meta list-inline">
-                                                <span class="entry-date">
-                                                    <i class="fa fa-clock-o"></i>
-                                                        {{$article->created_at}}
-                                                </span>
-                                            </div>
                                         </div>
 
                                         <div class="entry-content">
                                             <p>
-                                                {{$article->abstract}}
+                                                {{$video->abstract}}
                                             </p>
-
-                                            <div class="entry-footer">
-                                                <a href="{{url('/blog/articles').'/'.$article->id}}" class="send_btn">
-                                                    Read More <i class="ion-arrow-right-c"></i>
-                                                </a>
-                                            </div>
                                         </div>
 
                                     </div>

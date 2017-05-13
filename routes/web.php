@@ -29,6 +29,7 @@ Route::get('/blog', 'BlogController@getBlog');
 Route::get('/blog/articles/{id}', 'BlogController@getArticle');
 Route::get('/projects', 'ProjectController@getProjects');
 Route::get('/projects/{id}', 'ProjectController@getProject');
+Route::get('/videos', 'VideoController@getVideos');
 
 
 Auth::routes();
@@ -62,9 +63,8 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin'], function () {
     Route::resource('services', 'ServiceController');
 
     Route::resource('sliders', 'SliderController');
+
+    Route::resource('seos', 'SeoController');
+
+    Route::resource('videos', 'VideoController');
 });
-
-
-Route::resource('seos', 'SeoController');
-
-Route::resource('videos', 'VideoController');

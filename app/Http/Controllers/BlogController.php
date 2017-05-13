@@ -169,7 +169,7 @@ class BlogController extends AppBaseController
         return redirect(route('blogs.index'));
     }
 
-    public function getBlog(Request $reques)
+    public function getBlog(Request $request)
     {
         $articles = Blog::orderBy('id')->paginate(20);
         return view('blogs.show_articles')->with('articles', $articles);

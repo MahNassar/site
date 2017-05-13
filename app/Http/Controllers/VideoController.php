@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateVideoRequest;
 use App\Http\Requests\UpdateVideoRequest;
+use App\Models\Video;
 use App\Repositories\VideoRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
@@ -152,4 +153,11 @@ class VideoController extends AppBaseController
 
         return redirect(route('videos.index'));
     }
+
+    public function getVideos(Request $request)
+    {
+        $videos = Video::orderBy('id')->paginate(10);
+        return view('videos.show_videos')->with('videos', $videos);
+    }
+
 }
