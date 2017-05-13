@@ -19,6 +19,7 @@ class ProjectController extends AppBaseController
     public function __construct(ProjectRepository $projectRepo)
     {
         $this->projectRepository = $projectRepo;
+        parent::__construct();
     }
 
     /**

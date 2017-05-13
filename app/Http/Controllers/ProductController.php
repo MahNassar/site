@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateProductRequest;
 use App\Http\Requests\UpdateProductRequest;
+use App\Models\Blog;
+use App\Models\Seo;
 use App\Repositories\ProductRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
@@ -18,6 +20,10 @@ class ProductController extends AppBaseController
 
     public function __construct(ProductRepository $productRepo)
     {
+        $latestThreeBlog = Blog::orderBy('id')->take(3)->get();
+        view()->share('latestBlog', $latestThreeBlog);
+        $seo = Seo::all();
+        view()->share('seo', $seo);
         $this->productRepository = $productRepo;
     }
 

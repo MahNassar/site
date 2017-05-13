@@ -39,36 +39,20 @@
                     <div class="footer-contact">
                         <h3>recent post</h3>
                         <ul class="recent_posts" style="margin-left: -70px">
-                            <li>
-                                <div class="recent_posts_content">
-                                    <img src="images/portfolio/1.jpg" alt="">
-                                    <a href="blog-single.html" class="recent-title">Unlimited color panel</a>
-                                    <div class="recent_posts_info">
-                                        <a href="index.html#">By Dave </a>
-                                        <a href="index.html#"> March 21, 2016</a>
+                            @foreach($latestBlog as $article)
+                                <li>
+                                    <div class="recent_posts_content">
+                                        <img src="{{url('public/images/blog/' . $article->image)}}"
+                                             alt="{{$article->title}}">
+                                        <a href="blog-single.html" class="recent-title">{{$article->title}}</a>
+                                        <div class="recent_posts_info">
+
+                                            <a href="index.html#">  {{$article->created_at}}</a>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="recent_posts_content">
-                                    <img src="images/portfolio/2.jpg" alt="">
-                                    <a href="blog-single.html" class="recent-title">Standard video post</a>
-                                    <div class="recent_posts_info">
-                                        <a href="index.html#">By Dave </a>
-                                        <a href="index.html#"> March 21, 2016</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="recent_posts_content">
-                                    <img src="images/portfolio/3.jpg" alt="">
-                                    <a href="blog-single.html" class="recent-title">Fully customizable themes</a>
-                                    <div class="recent_posts_info">
-                                        <a href="index.html#">By Dave </a>
-                                        <a href="index.html#"> March 21, 2016</a>
-                                    </div>
-                                </div>
-                            </li>
+                                </li>
+                            @endforeach
+
                         </ul>
                     </div>
                 </div>

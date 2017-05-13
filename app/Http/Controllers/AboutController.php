@@ -20,6 +20,7 @@ class AboutController extends AppBaseController
     public function __construct(AboutRepository $aboutRepo)
     {
         $this->aboutRepository = $aboutRepo;
+        parent::__construct();
     }
 
     /**

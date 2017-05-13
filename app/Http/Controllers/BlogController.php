@@ -20,6 +20,7 @@ class BlogController extends AppBaseController
     public function __construct(BlogRepository $blogRepo)
     {
         $this->blogRepository = $blogRepo;
+        parent::__construct();
     }
 
     /**

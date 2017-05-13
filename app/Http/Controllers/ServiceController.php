@@ -20,6 +20,8 @@ class ServiceController extends AppBaseController
     public function __construct(ServiceRepository $serviceRepo)
     {
         $this->serviceRepository = $serviceRepo;
+        parent::__construct();
+
     }
 
     /**

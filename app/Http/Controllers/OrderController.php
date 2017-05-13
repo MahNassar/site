@@ -20,6 +20,7 @@ class OrderController extends AppBaseController
     public function __construct(OrderRepository $orderRepo)
     {
         $this->orderRepository = $orderRepo;
+        parent::__construct();
     }
 
     /**

@@ -24,9 +24,9 @@ class MainController extends Controller
         $testimonials_count = Quote::where([
             ['ip', \Request::ip()]
         ])->count();
-        if ($testimonials_count > 0){
+        if ($testimonials_count > 0) {
             $qoutes = true;
-        }else{
+        } else {
             $qoutes = false;
         }
         $projects = Project::orderBy('id')->take(3)->get();
@@ -40,5 +40,15 @@ class MainController extends Controller
             'servives' => $servives,
             'qoutes' => $qoutes
         ]);
+    }
+
+    public function getContactPage()
+    {
+        return view('website.contact');
+    }
+
+    public function sendMail()
+    {
+
     }
 }
