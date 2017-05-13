@@ -22,6 +22,7 @@ Route::get('/products', 'ProductController@getProducts');
 Route::get('/products/{id}', 'ProductController@getProduct');
 Route::get('/inquire_order', 'OrderController@order');
 Route::post('/request_order', 'OrderController@requestOrder');
+Route::post('/user_quote', 'QuoteController@registerQuote');
 Route::get('/services', 'ServiceController@getServices');
 Route::get('/services/{id}', 'ServiceController@showService');
 Route::get('/blog', 'BlogController@getBlog');
@@ -63,3 +64,5 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin'], function () {
 
 
 Route::resource('seos', 'SeoController');
+
+Route::resource('videos', 'VideoController');

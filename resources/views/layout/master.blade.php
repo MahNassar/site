@@ -85,6 +85,35 @@
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
 <!--[if lt IE 10]>
 <script type="text/javascript" src="{{url('public/js/placeholder.js')}}"></script><![endif]-->
+
+<script>
+    function check() {
+        var name = $("#name").val();
+        var position = $("#position").val();
+        var quote = $("#quote").val();
+
+        if (name == "" || name == null) {
+            $('.name_required').show();
+            return false;
+        }else {
+            $('.name_required').hide();
+        }
+
+        if (position == "" || position == null) {
+            $('.position_required').show();
+            return false;
+        }else {
+            $('.position_required').hide();
+        }
+
+        if (quote == "" || quote == null) {
+            $('.quote_required').show();
+            return false;
+        }else {
+            $('.product_required').hide();
+        }
+    }
+</script>
 <!--================= End JS sctipts ==================-->
 </body>
 </html>
