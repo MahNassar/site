@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateQuoteRequest;
 use App\Http\Requests\UpdateQuoteRequest;
+use App\Models\Quote;
 use App\Repositories\QuoteRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
@@ -151,5 +152,24 @@ class QuoteController extends AppBaseController
         Flash::success('Quote deleted successfully.');
 
         return redirect(route('quotes.index'));
+    }
+
+    public function registerQuote(CreateQuoteRequest $request)
+    {
+        $username = $request->get('name');
+        $position = $request->get('position');
+        $quote = $request->get('quote');
+        $ip = \Request::ip();
+        $isActive = 0;
+
+        $quote = new Quote();
+        $quote->username = $username;
+        $quote->position = $position;
+        $quote->quote = $quote;
+        $quote->ip = $ip;
+        $quote->isActice = $isActive;
+
+        $quote->save();
+        return redirect('/');
     }
 }

@@ -243,9 +243,40 @@
                         <div class="underline"><i class="fa fa-circle-thin"></i></div>
                     </div>
                 </div>
-                <form>
-                    sdfdf
-                </form>
+                <div style="background-color: #f9f9f9;padding: 30px;border-radius: 7px;">
+                    {!! Form::open(['url' => '/user_quote', 'method' => 'post']) !!}
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="size">User Name <span style="color:#D0AD55;font-weight: bold;">*</span></label>
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="Enter Your Name" required>
+                                    <span style="color:#D0AD55;display: none;" class="name_required">Name Field Is Required</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="size">Position <span style="color:#D0AD55;font-weight: bold;">*</span></label>
+                                    <input type="text" class="form-control" name="position" id="position" placeholder="Enter Your Position" required>
+                                    <span style="color:#D0AD55;display: none;" class="position_required">Position Field Is Required</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="size">Quote <span style="color:#D0AD55;font-weight: bold;">*</span></label>
+                                    <textarea type="text" class="form-control" name="quote" id="quote" placeholder="Enter Your Quote"></textarea>
+                                    <span style="color:#D0AD55;display: none;" class="quote_required">Quote Field Is Required</span>
+                                </div>
+                            </div>
+                            <div class="col-md-3"></div>
+                        </div>
+                        <center>
+                            <button type="submit" class="send_btn" onclick="check()">Order</button>
+                        </center>
+                    {!! Form::close() !!}
+                </div>
             </div>
         </section>
     @endif
@@ -307,3 +338,4 @@
 
 
 @endsection
+
