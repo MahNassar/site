@@ -30,6 +30,7 @@ Route::get('/projects', 'ProjectController@getProjects');
 Route::get('/projects/{id}', 'ProjectController@getProject');
 Route::get('/contact', 'MainController@getContactPage');
 Route::get('/videos', 'VideoController@getVideos');
+Route::post('/user_quote', 'QuoteController@registerQuote');
 
 
 Auth::routes();

@@ -273,7 +273,7 @@
                             <div class="col-md-3"></div>
                         </div>
                         <center>
-                            <button type="submit" class="send_btn" onclick="check()">Order</button>
+                            <button type="submit" class="send_btn" onclick="check()">Quote</button>
                         </center>
                     {!! Form::close() !!}
                 </div>
