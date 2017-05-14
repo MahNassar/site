@@ -115,6 +115,15 @@
         }else {
             $('.product_required').hide();
         }
+
+        {{--$.post('{{url('/user_quote')}}', {--}}
+            {{--name: name,--}}
+            {{--position: position,--}}
+            {{--quote: quote,--}}
+        {{--}, function (data) {--}}
+            {{--location.reload();--}}
+
+        {{--});--}}
     }
 </script>
 <!--================= End JS sctipts ==================-->

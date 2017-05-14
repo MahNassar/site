@@ -2,11 +2,14 @@
 
 @section('content')
 <!--================= Start Page Header Section ==================-->
+
 <section class="page_section nopadding">
     <div class="overlay">
-        <div class="background-overlay overlay_opacity_15 overlay_grayscale" style="background-image: url('{{url('public/images/bg_services.jpg')}}');"></div>
+        <div class="background-overlay overlay_opacity_15 overlay_grayscale"
+             style="background-image: url('{{url('public/images/bg_services.jpg')}}');">
+        </div>
     </div>
-    <div class="page-header half text-center">
+    <div class="page-header text-center">
         <div class="table">
             <div class="inner">
                 <div class="page-header-content">
@@ -17,8 +20,8 @@
         </div>
 
         <ol class="breadcrumb">
-            <li><a href="{{url('/')}}">Home</a></li>
-            <li class="active">Services</li>
+            <li><a href="#">Home</a></li>
+            <li><a href="">Services</a></li>
         </ol>
     </div>
 </section>

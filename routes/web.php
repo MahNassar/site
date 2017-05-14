@@ -16,7 +16,9 @@
 //});
 
 
-Route::get('/', 'MainController@home');
+//Route::get('/', 'MainController@home');
+Route::get('/', ['as' => 'Home', 'uses' => 'MainController@home']);
+
 Route::get('/about', 'AboutController@getAbout');
 Route::get('/products', 'ProductController@getProducts');
 Route::get('/products/{id}', 'ProductController@getProduct');

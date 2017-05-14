@@ -123,7 +123,7 @@ Center menu
 var total_menu_items = $('#header.type1 .primary_menu > ul > li').length;  //Get the count of the all menu items
 var half_position_even = total_menu_items / 2;   //If the count is even, just directly divide by 2
 var half_position_odd = (total_menu_items - 1) / 2;   //If the count is odd, just adding 1 in order to make it to be an even, then divide by 2
-var logo_html = '<li class="logo"><a href="http://www.ems-min.com"><img src="public/images/logo.png" alt="mine" class="img-responsive mine-logo"/></a></li>'; //LOGO HTML
+var logo_html = '<li class="logo"><a href="http://www.ems-min.com"><img src="public/images/logo.png" alt="EMS" class="img-responsive mine-logo"/></a></li>'; //LOGO HTML
 var ex = /^\d+$/;
 if (ex.test(total_menu_items / 2)) {
 $('#header.type1 .primary_menu > ul > li:nth-child(' + half_position_even + ')').after(logo_html);

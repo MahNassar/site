@@ -170,6 +170,6 @@ class QuoteController extends AppBaseController
         $quote->isActice = $isActive;
 
         $quote->save();
-        return redirect('/');
+        return redirect()->route('/');
     }
 }
