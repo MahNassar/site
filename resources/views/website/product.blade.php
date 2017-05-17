@@ -8,7 +8,7 @@
             ?>
 
             <div class="background-overlay overlay_opacity_15 overlay_grayscale"
-                 style="background-image: url({{url('public/images/' . $images[0])}})">
+                 style="background-image: url('{{url('public/images/product-header.jpg')}}')">
             </div>
         </div>
         <div class="page-header text-center">

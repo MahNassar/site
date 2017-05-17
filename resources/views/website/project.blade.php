@@ -8,8 +8,9 @@
             $images = explode(PHP_EOL, $project->images);
             ?>
 
+
             <div class="background-overlay overlay_opacity_15 overlay_grayscale"
-                 style="background-image: url({{url('public/images/projects/' . $images[0])}})">
+                 style="background-image: url('{{url('public/images/project-header.jpg')}}')">
             </div>
         </div>
         <div class="page-header text-center">
