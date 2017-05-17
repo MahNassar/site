@@ -244,7 +244,7 @@
                     </div>
                 </div>
                 <div style="background-color: #f9f9f9;padding: 30px;border-radius: 7px;">
-                    {!! Form::open(['url' => '/user_quote', 'method' => 'post']) !!}
+                    {!! Form::open(['url' => 'quotes/user_quote', 'method' => 'post']) !!}
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -273,7 +273,7 @@
                             <div class="col-md-3"></div>
                         </div>
                         <center>
-                            <button type="submit" class="send_btn" onclick="check()">Quote</button>
+                            <button  class="send_btn" onclick="check()">Quote</button>
                         </center>
                     {!! Form::close() !!}
                 </div>

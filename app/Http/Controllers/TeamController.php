@@ -63,6 +63,8 @@ class TeamController extends AppBaseController
             $image->move($destinationPath, $imageName);
             $photo = $imageName;
             $input['photo'] = $photo;
+        }else{
+            $input['photo'] = 'avatar.jpg';
         }
 
         $team = $this->teamRepository->create($input);
@@ -137,6 +139,8 @@ class TeamController extends AppBaseController
             $image->move($destinationPath, $imageName);
             $photo = $imageName;
             $input['photo'] = $photo;
+        }else{
+            $input['photo'] = 'avatar.jpg';
         }
 
         $team = $this->teamRepository->update($input, $id);
