@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>EMS - Egyptian Mining Sources</title>
-    <meta name="description" content="Creative Agency & Portfolio HTML Template">
-    <meta name="keywords" content="mine, creatve, portfolio, html, template, carousel, theme, agency, html5">
+    <meta name="description" content="{{$seo->meta_description}}">
+    <meta name="keywords" content={{$seo->meta_keywords}}>
     <link href="https://fonts.googleapis.com/css?family=Dosis:400,200,300,500,600,700,800" rel="stylesheet"
           type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,600italic,700,700italic,800,800italic"
