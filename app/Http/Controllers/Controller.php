@@ -15,7 +15,7 @@ class Controller extends BaseController
     {
         $latestThreeBlog = Blog::orderBy('created_at', 'DESC')->take(3)->select('id', 'title', 'image')->get();
         view()->share('latestBlog', $latestThreeBlog);
-        $seo = Seo::all();
+        $seo = Seo::first();
         view()->share('seo', $seo);
 
     }
