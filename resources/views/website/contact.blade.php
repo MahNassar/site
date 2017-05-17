@@ -34,8 +34,8 @@
                     <div class="row mb60">
                         <div class="col-md-8">
                             <div class="contact-map">
-                                <div id="contactmap" data-position-latitude="27.692548"
-                                     data-position-longitude="85.3361"></div>
+                                <div id="contactmap" data-position-latitude="30.0737198"
+                                     data-position-longitude="31.3441064"></div>
                             </div>
                         </div>
                         <div class="col-md-4">
