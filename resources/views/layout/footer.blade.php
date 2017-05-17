@@ -12,7 +12,7 @@
                             <div class="icon"><span class="ion-android-call"></span></div>
                             <div class="info_holder">
                                 <h4>call us</h4>
-                                +977 (9841) 75 23 20
+                                (02)23052771
                             </div>
                         </div>
 
@@ -20,7 +20,7 @@
                             <div class="icon"><span class="ion-android-pin"></span></div>
                             <div class="info_holder">
                                 <h4>Address</h4>
-                                245 Quigley Blvd, Ste K
+                                22 Military Logistics Buildings, Naser City , Cairo
                             </div>
                         </div>
 
@@ -28,7 +28,7 @@
                             <div class="icon"><span class="ion-android-mail"></span></div>
                             <div class="info_holder">
                                 <h4>Email</h4>
-                                <a href="mailto:#">support@mine.co</a>
+                                <a href="mailto:#">info@ems-min.com</a>
                             </div>
                         </div>
 
