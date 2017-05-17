@@ -156,20 +156,21 @@ class QuoteController extends AppBaseController
 
     public function registerQuote(CreateQuoteRequest $request)
     {
+
         $username = $request->get('name');
         $position = $request->get('position');
-        $quote = $request->get('quote');
+        $quote_msg = $request->get('quote');
         $ip = \Request::ip();
         $isActive = 0;
 
         $quote = new Quote();
         $quote->username = $username;
         $quote->position = $position;
-        $quote->quote = $quote;
+        $quote->quote = $quote_msg;
         $quote->ip = $ip;
-        $quote->isActice = $isActive;
-
+        $quote->isActive = $isActive;
         $quote->save();
-        return redirect()->route('/');
+
+        return redirect()->to('/');
     }
 }

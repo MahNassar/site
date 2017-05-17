@@ -209,77 +209,79 @@
 
     <!--================= Start testomonials Section ==================-->
 
-    @if(isset($testimonials) && $testimonials->count() > 0 && $qoutes == true)
-        <section>
-            <div class="overlay">
-                <div class="background-overlay overlay_opacity_20" style="background-image: url(images/bg_testomonials.jpg);"></div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="testimonials-wrap">
-                            <div id="testimonials" class="owl-carousel">
-                                @foreach($testimonials as $testimonial)
-                                    <div class="testomonials-info">
-                                        <p>{{$testimonial->quote}}</p>
-                                        <div class="testimonials_name">
-                                            <h3>{{$testimonial->username}}</h3>
-                                            <p>{{$testimonial->position}}</p>
-                                        </div>
+        @if($qoutes)
+            @if(isset($testimonials) && $testimonials->count() > 0)
+                <section>
+                    <div class="overlay">
+                        <div class="background-overlay overlay_opacity_20" style="background-image: url(images/bg_testomonials.jpg);"></div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 col-lg-offset-2">
+                                <div class="testimonials-wrap">
+                                    <div id="testimonials" class="owl-carousel">
+                                        @foreach($testimonials as $testimonial)
+                                            <div class="testomonials-info">
+                                                <p>{{$testimonial->quote}}</p>
+                                                <div class="testimonials_name">
+                                                    <h3>{{$testimonial->username}}</h3>
+                                                    <p>{{$testimonial->position}}</p>
+                                                </div>
+                                            </div>
+                                         @endforeach
                                     </div>
-                                 @endforeach
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
-    @else
-        <section>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center title">
-                        <h2>Your Quote For Us</h2>
-                        <div class="underline"><i class="fa fa-circle-thin"></i></div>
+                </section>
+            @endif
+        @else
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center title">
+                            <h2>Your Quote For Us</h2>
+                            <div class="underline"><i class="fa fa-circle-thin"></i></div>
+                        </div>
+                    </div>
+                    <div style="background-color: #f9f9f9;padding: 30px;border-radius: 7px;">
+                        {!! Form::open(['url' => 'quotes/user_quote', 'method' => 'post']) !!}
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="size">User Name <span style="color:#D0AD55;font-weight: bold;">*</span></label>
+                                        <input type="text" class="form-control" name="name" id="name" placeholder="Enter Your Name" required>
+                                        <span style="color:#D0AD55;display: none;" class="name_required">Name Field Is Required</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="size">Position <span style="color:#D0AD55;font-weight: bold;">*</span></label>
+                                        <input type="text" class="form-control" name="position" id="position" placeholder="Enter Your Position" required>
+                                        <span style="color:#D0AD55;display: none;" class="position_required">Position Field Is Required</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3"></div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="size">Quote <span style="color:#D0AD55;font-weight: bold;">*</span></label>
+                                        <textarea type="text" class="form-control" name="quote" id="quote" placeholder="Enter Your Quote"></textarea>
+                                        <span style="color:#D0AD55;display: none;" class="quote_required">Quote Field Is Required</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-3"></div>
+                            </div>
+                            <center>
+                                <button  class="send_btn" onclick="check()">Quote</button>
+                            </center>
+                        {!! Form::close() !!}
                     </div>
                 </div>
-                <div style="background-color: #f9f9f9;padding: 30px;border-radius: 7px;">
-                    {!! Form::open(['url' => 'quotes/user_quote', 'method' => 'post']) !!}
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="size">User Name <span style="color:#D0AD55;font-weight: bold;">*</span></label>
-                                    <input type="text" class="form-control" name="name" id="name" placeholder="Enter Your Name" required>
-                                    <span style="color:#D0AD55;display: none;" class="name_required">Name Field Is Required</span>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="size">Position <span style="color:#D0AD55;font-weight: bold;">*</span></label>
-                                    <input type="text" class="form-control" name="position" id="position" placeholder="Enter Your Position" required>
-                                    <span style="color:#D0AD55;display: none;" class="position_required">Position Field Is Required</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3"></div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="size">Quote <span style="color:#D0AD55;font-weight: bold;">*</span></label>
-                                    <textarea type="text" class="form-control" name="quote" id="quote" placeholder="Enter Your Quote"></textarea>
-                                    <span style="color:#D0AD55;display: none;" class="quote_required">Quote Field Is Required</span>
-                                </div>
-                            </div>
-                            <div class="col-md-3"></div>
-                        </div>
-                        <center>
-                            <button  class="send_btn" onclick="check()">Quote</button>
-                        </center>
-                    {!! Form::close() !!}
-                </div>
-            </div>
-        </section>
-    @endif
+            </section>
+        @endif
 
     <!--================= End testomonials Section ==================-->
 
