@@ -79,16 +79,19 @@ class ProductController extends AppBaseController
     {
         $input = $request->all();
         $files = $request->file('images');
-        $images = '';
-        foreach ($files as $file) {
-            $imageName = time() . '_' . $file->getClientOriginalName() . '.' . $file->getClientOriginalExtension();
-            $destinationPath = public_path('/images');
-            if ($file->move($destinationPath, $imageName)) {
-                $images .= $imageName . "\n";
+        if ($files){
+            $images = '';
+            foreach ($files as $file) {
+                $imageName = time() . '_' . $file->getClientOriginalName() . '.' . $file->getClientOriginalExtension();
+                $destinationPath = public_path('/images');
+                if ($file->move($destinationPath, $imageName)) {
+                    $images .= $imageName . "\n";
+                }
             }
+            $input['images'] = $images;
         }
-        $input['images'] = $images;
 
+        $input['images'] = '';
 
         $product = $this->productRepository->create($input);
 
@@ -148,6 +151,7 @@ class ProductController extends AppBaseController
     public function update($id, UpdateProductRequest $request)
     {
         $product = $this->productRepository->findWithoutFail($id);
+        $lastImages = $product->images;
 
         if (empty($product)) {
             Flash::error('Product not found');
@@ -157,15 +161,20 @@ class ProductController extends AppBaseController
 
         $input = $request->all();
         $files = $request->file('images');
-        $images = '';
-        foreach ($files as $file) {
-            $imageName = time() . '_' . $file->getClientOriginalName() . '.' . $file->getClientOriginalExtension();
-            $destinationPath = public_path('/images');
-            if ($file->move($destinationPath, $imageName)) {
-                $images .= $imageName . "\n";
+        if ($files){
+            $images = '';
+            foreach ($files as $file) {
+                $imageName = time() . '_' . $file->getClientOriginalName() . '.' . $file->getClientOriginalExtension();
+                $destinationPath = public_path('/images');
+                if ($file->move($destinationPath, $imageName)) {
+                    $images .= $imageName . "\n";
+                }
             }
+            $input['images'] = $images;
+        }else{
+            $input['images'] = $lastImages;
         }
-        $input['images'] = $images;
+
 
 
         $product = $this->productRepository->update($input, $id);
