@@ -91,11 +91,8 @@
                 </div>
                 <div class="col-md-6">
                     <div class="social-icons pull-right">
-                        <a href="index.html#"><i class="ion-social-dribbble-outline"></i></a>
-                        <a href="index.html#"><i class="ion-social-octocat"></i></a>
-                        <a href="index.html#"><i class="ion-social-twitter"></i></a>
-                        <a href="index.html#"><i class="ion-social-instagram"></i></a>
-                        <a href="index.html#"><i class="ion-social-github"></i></a>
+                        <a href="#"><i class="ion-social-youtube" style="font-size: 25px;"></i></a>
+                        <a href="https://www.facebook.com/Egyptianmining "><i class="ion-social-facebook-outline" style="font-size: 25px;"></i></a>
                     </div>
                 </div>
             </div>
