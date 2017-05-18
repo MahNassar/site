@@ -41,6 +41,10 @@
                             <a href="{{url('contact')}}">Contact</a>
                         </li>
 
+                        <li class="scroll has-child">
+                            <a href="{{url('videos')}}">Videos</a>
+                        </li>
+
 
                     </ul>
                 </nav>
