@@ -22,7 +22,7 @@ class ProductController extends AppBaseController
     {
         $latestThreeBlog = Blog::orderBy('id')->take(3)->get();
         view()->share('latestBlog', $latestThreeBlog);
-        $seo = Seo::all();
+        $seo = Seo::first();
         view()->share('seo', $seo);
         $this->productRepository = $productRepo;
     }

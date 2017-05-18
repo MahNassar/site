@@ -83,7 +83,7 @@
                             <div class="inner">
                                 <!--<i class="icon-presentation"></i>-->
                                 <a href="{{url('').'/products/'.$product->id}}">
-                                    <img src="{{url('public/images/' . $images[0])}}" class="img-rounded" alt="Cinque Terre" width="200" height="200">
+                                    <img src="{{url('public/images/' . $images[1])}}" class="img-rounded" alt="Cinque Terre" width="200" height="200">
                                 </a>
                                 <div class="text">
                                     <h3 style="font-size: 14px">{{str_limit($product->title, 40)}}</h3>
@@ -160,7 +160,7 @@
                             <div class="team_block">
                                 @if($i==1 ||$i==2)
                                     <div class="col-md-6 col-sm-6 col-xs-6 col-12 nopadding @if($i==1 ||$i==2)img-left @else img-right @endif ">
-                                        <img src="{{url('public/images/team/'.$item->photo)}}" alt="{{$item->name}}">
+                                        <img src="{{url('public/images/team/'.$item->photo)}}" alt="{{$item->name}}" style="height:293px;width: 283px;">
                                         <svg viewBox="0 0 25 100" class="curved-shape">
                                             <path d="M0,100c0-37.5,25-37.5,25-50S0,37.5,0,0"/>
                                         </svg>
@@ -189,7 +189,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-sm-6 col-xs-6 col-12 nopadding @if($i==1 ||$i==2)img-left @else img-right @endif ">
-                                        <img src="{{url('public/images/team/'.$item->photo)}}" alt="{{$item->name}}">
+                                        <img src="{{url('public/images/team/'.$item->photo)}}" alt="{{$item->name}}"style="height:293px;width: 283px;">
                                         <svg viewBox="0 0 25 100" class="curved-shape">
                                             <path d="M0,100c0-37.5,25-37.5,25-50S0,37.5,0,0"/>
                                         </svg>

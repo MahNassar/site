@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateVideoRequest;
 use App\Http\Requests\UpdateVideoRequest;
+use App\Models\Blog;
+use App\Models\Seo;
 use App\Models\Video;
 use App\Repositories\VideoRepository;
 use App\Http\Controllers\AppBaseController;
@@ -19,6 +21,10 @@ class VideoController extends AppBaseController
 
     public function __construct(VideoRepository $videoRepo)
     {
+        $latestThreeBlog = Blog::orderBy('id')->take(3)->get();
+        view()->share('latestBlog', $latestThreeBlog);
+        $seo = Seo::first();
+        view()->share('seo', $seo);
         $this->videoRepository = $videoRepo;
     }
 
