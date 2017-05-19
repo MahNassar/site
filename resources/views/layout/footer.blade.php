@@ -91,8 +91,8 @@
                 </div>
                 <div class="col-md-6">
                     <div class="social-icons pull-right">
-                        <a href="#"><i class="ion-social-youtube" style="font-size: 25px;"></i></a>
-                        <a href="https://www.facebook.com/Egyptianmining "><i class="ion-social-facebook-outline" style="font-size: 25px;"></i></a>
+                        <a href="#" target="_blank"><i class="ion-social-youtube" style="font-size: 25px;"></i></a>
+                        <a href="https://www.facebook.com/Egyptianmining " target="_blank"><i class="ion-social-facebook-outline" style="font-size: 25px;"></i></a>
                     </div>
                 </div>
             </div>

@@ -46,8 +46,13 @@
                                 <article class="entry-item">
                                     <div class="entry-img">
                                         <a href="{{url('').'/products/'.$product->id}}">
-                                            <img src="{{url('public/images/' . $images[1])}}"
-                                                 alt="Post Image" style="width: 400px;height: 270px;"/>
+                                            @if(count($images) > 1)
+                                                <img src="{{url('public/images/' . $images[1])}}"
+                                                     alt="Post Image" style="width: 400px;height: 270px;"/>
+                                            @else
+                                                <img src="{{url('public/images/' . $images[0])}}"
+                                                     alt="Post Image" style="width: 400px;height: 270px;"/>
+                                            @endif
                                         </a>
                                     </div>
 
