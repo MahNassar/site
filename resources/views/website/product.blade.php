@@ -42,9 +42,9 @@
                         @foreach($images as $image)
                             @if($loop->iteration < count($images))
                                 @if($image != "")
-                                    <div class="item"><img src="{{url('public/images/' . $image)}}" alt="#"></div>
+                                    <div class="item"><img src="{{url('public/images/' . $image)}}" alt="#" style="height: 600px;width: 500px;"></div>
                                 @else
-                                    <img src="{{url('public/images/' . $image)}}">
+                                    <img src="{{url('public/images/' . $image)}}" style="height: 600px;width: 500px;">
                                 @endif
                             @endif
                         @endforeach
