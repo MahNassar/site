@@ -40,10 +40,12 @@
                             $images = explode(PHP_EOL, $product->images);
                         ?>
                         @foreach($images as $image)
-                            @if($image != "")
-                                <div class="item"><img src="{{url('public/images/' . $image)}}" alt="#"></div>
-                            @else
-                                <img src="{{url('public/images/' . $image)}}">
+                            @if($loop->iteration < count($images))
+                                @if($image != "")
+                                    <div class="item"><img src="{{url('public/images/' . $image)}}" alt="#"></div>
+                                @else
+                                    <img src="{{url('public/images/' . $image)}}">
+                                @endif
                             @endif
                         @endforeach
 
