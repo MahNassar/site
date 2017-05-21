@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="logo_sect">
-                    <a href="{{url('/')}}" class="logo" title=""><img src="{{url('public/images/ems-logo.png')}}"
+                    <a href="{{url('/')}}" class="logo" title=""><img src="{{url('public/images/logo.png')}}"
                                                                       class="mine-logo" alt=""></a>
 
                 </div>
