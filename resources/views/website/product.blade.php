@@ -55,7 +55,7 @@
                     <div class="portfolio-single-wrapper">
                         <h2>Description</h2>
                         <div class="description">
-                            <p>{{$product->description}}</p>
+                            <p>{!! $product->description !!}</p>
 
 
                         </div>

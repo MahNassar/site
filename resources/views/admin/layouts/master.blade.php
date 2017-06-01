@@ -7,6 +7,8 @@
     <title>@yield('title')</title>
     <link rel="stylesheet" href="{{ url('public/css/corecss.css') }}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+
     @yield('css')
     @stack('css')
 </head>
@@ -144,6 +146,7 @@
         $("a[data-value='blockquote']").hide();
         $("button[data-original-title='Recent Color']").removeAttr('data-backcolor');
     })
+
 </script>
 <!-------------End Messages--------------------->
 @yield('scripts')
