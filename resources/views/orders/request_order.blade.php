@@ -11,9 +11,9 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="username">Username <span style="color:#D0AD55;font-weight: bold;">*</span></label>
+                        <label for="username">Username <span style="color:#EE220C;font-weight: bold;">*</span></label>
                         <input type="text" class="form-control" name="username" id="username" placeholder="Enter Your Name" maxlength="100" required>
-                        <span style="color:#D0AD55;display: none;"  class="name_required">Name Field Is Required</span>
+                        <span style="color:#EE220C;display: none;"  class="name_required">Name Field Is Required</span>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -32,34 +32,34 @@
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="email">Email <span style="color:#D0AD55;font-weight: bold;">*</span></label>
+                        <label for="email">Email <span style="color:#EE220C;font-weight: bold;">*</span></label>
                         <input type="email" class="form-control" name="email" id="email" placeholder="Enter Your Email" maxlength="90" required>
-                        <span style="color:#D0AD55;display: none;"  class="email_required">Email field is REQUIRED and must be EMAIL format</span>
+                        <span style="color:#EE220C;display: none;"  class="email_required">Email field is REQUIRED and must be EMAIL format</span>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="product">Product Name <span style="color:#D0AD55;font-weight: bold;">*</span></label>
+                        <label for="product">Product Name <span style="color:#EE220C;font-weight: bold;">*</span></label>
                         <input type="text" class="form-control" name="product" id="product" placeholder="Enter Product Name" maxlength="50" required>
-                        <span style="color:#D0AD55;display: none;" class="product_required">Product Name Field Is Required</span>
+                        <span style="color:#EE220C;display: none;" class="product_required">Product Name Field Is Required</span>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="quantity">Quantity <span style="color:#D0AD55;font-weight: bold;">*</span></label>
+                        <label for="quantity">Quantity <span style="color:#EE220C;font-weight: bold;">*</span></label>
                         <input type="text" class="form-control" name="quantity" id="quantity" placeholder="Enter Order Quantity" required>
-                        <span style="color:#D0AD55;display: none;"  class="quantity_required">Quantity Field Is Required</span>
+                        <span style="color:#EE220C;display: none;"  class="quantity_required">Quantity Field Is Required</span>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="size">Product Size <span style="color:#D0AD55;font-weight: bold;">*</span></label>
+                        <label for="size">Product Size <span style="color:#EE220C;font-weight: bold;">*</span></label>
                         <input type="text" class="form-control" name="size" id="size" placeholder="Enter Product Size" required>
-                        <span style="color:#D0AD55;display: none;" class="size_required">Size Field Is Required</span>
+                        <span style="color:#EE220C;display: none;" class="size_required">Size Field Is Required</span>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -83,7 +83,7 @@
     }
     button:hover{
         background-color: #FFF!important;
-        border: 1px #D0AD55 solid !important;
+        border: 1px #EE220C solid !important;
     }
     .has-error{
         border: 1px red solid;
