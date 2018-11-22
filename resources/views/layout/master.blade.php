@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>EMS - Egyptian Mining Sources</title>
+    <title>FEED</title>
     <meta name="description" content="{{$seo->meta_description}}">
-    <meta name="keywords" content={{$seo->meta_keywords}}>
+    <meta name="keywords" content="{{$seo->meta_keywords}}">
     <link href="https://fonts.googleapis.com/css?family=Dosis:400,200,300,500,600,700,800" rel="stylesheet"
           type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,600italic,700,700italic,800,800italic"
@@ -26,8 +26,8 @@
     <link href="{{url('public/css/owl.carousel.min.css')}}" rel="stylesheet">
     <link href="{{url('public/css/owl.theme.default.min.css')}}" rel="stylesheet">
     <!-- FAVICON FILES -->
-    <link rel="shortcut icon" href="{{url('public/images/ems-favicon.png')}}" type="image/x-icon">
-    <link rel="icon" href="{{url('public/images/ems-favicon.png')}}" type="image/x-icon">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <link rel="icon" href="#" type="image/x-icon">
 
     <script>
         (function (i, s, o, g, r, a, m) {

@@ -87,7 +87,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <p>Copyright&nbsp;©&nbsp;2017. EMS.</p>
+                    <p>Copyright&nbsp;©&nbsp;2018. feed.com.co</p>
                 </div>
                 <div class="col-md-6">
                     <div class="social-icons pull-right">
