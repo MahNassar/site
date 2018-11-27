@@ -13,7 +13,7 @@
                             <div class="icon"><span class="ion-android-call"></span></div>
                             <div class="info_holder">
                                 <h4>اتصل بنا</h4>
-                                (02)23052771
+                                19635
                             </div>
                         </div>
 
@@ -29,7 +29,7 @@
                             <div class="icon"><span class="ion-android-mail"></span></div>
                             <div class="info_holder">
                                 <h4>البريد الالكترونى</h4>
-                                <a href="mailto:#">info@ems-min.com</a>
+                                <h4>info@feed.com</h4>
                             </div>
                         </div>
 
