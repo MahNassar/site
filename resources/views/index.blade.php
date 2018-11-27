@@ -56,21 +56,21 @@
             </div>
             <div id="particles"></div>
         </div>
-        <a href="index.html#" class="scroll-down">
+        <a href="#" class="scroll-down">
             <i class="fa fa-angle-down"></i>
         </a>
     </div>
 
-    <section class="type1">
-        <div class="overlay">
-            <div class="background-overlay overlay_opacity_15" style="background-image: url(images/bg_who.jpg);"></div>
-        </div>
+    <section class="lightbox-gallery bg-light pb0 type1 whtbg">
+        {{--<div class="overlay">--}}
+        {{--<div class="background-overlay overlay_opacity_15" style="background-image: url(images/bg_who.jpg);"></div>--}}
+        {{--</div>--}}
         <div class="who_we_are">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-center title">
-                        <h2 class="white">خدماتنا</h2>
-                        <div class="underline"><i class="fa fa-circle-thin"></i></div>
+                        <h2 class="black">خدماتنا</h2>
+                        <div class="underline black"><i class="fa fa-circle-thin"></i></div>
                     </div>
                 </div>
                 <div class="row">
@@ -80,13 +80,13 @@
                                 <a href="{{url('/services') . '/' .$service->id}}">
                                     <img src="{{url('public/images/services/' . $service->image)}}">
                                 </a>
-                                <div class="text">
+                                <div class="text ">
                                     <a href="{{url('/services') . '/' .$service->id}}">
                                         <h3 style="font-size: 13px">
                                             {{str_limit($service->title, 45)}}
                                         </h3>
                                     </a>
-                                    <p>
+                                    <p class="txt_black">
                                         {{str_limit($service->description, 100)}}
                                     </p>
                                 </div>
@@ -98,6 +98,7 @@
             </div>
         </div>
     </section>
+
     <!--================= end who we are Section ==================-->
     <section class="lightbox-gallery bg-light pb0 type1 ">
         <div class="container">
@@ -143,16 +144,43 @@
 
     </section>
 
-    <!--================= End Projects Section ==================-->
-    <section class="type1">
-        <div class="overlay">
-            <div class="background-overlay overlay_opacity_15" style="background-image: url(images/bg_who.jpg);"></div>
+    <section class="whtbg">
+        <div class="overlay"></div>
+        <div class="background-overlay" style="background-image: url('{{url('public/images/tt1.jpg')}}');"></div>
+        <div id="facts">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-6 col-sm-6 col-xs-6 col-12 text-center">
+                        <div class="fact-item">
+                            <div class="fact-number" data-count="414">
+                                <div class="icon-happy"></div>
+                                <h3 class="fact-desc">عملاء سعداء</h3>
+                                <div class="count-focus">414</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-6 col-12 text-center">
+                        <div class="fact-item">
+                            <div class="fact-number" data-count="543">
+                                <div class="icon-trophy"></div>
+                                <h3 class="fact-desc">خدمات تم انجازها</h3>
+                                <div class="count-focus">543</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
+
+    <!--================= End Projects Section ==================-->
+    <section class="type1 lightbox-gallery bg-light pb0 type1">
         <div class="who_we_are">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-center title">
-                        <h2 class="white">شركائنا</h2>
+                        <h2 class="black">شركائنا</h2>
                         <div class="underline"><i class="fa fa-circle-thin"></i></div>
                     </div>
                 </div>
@@ -176,7 +204,7 @@
         </div>
     </section>
 
-    <section class="lightbox-gallery bg-light pb0 type1 container">
+    <section class="lightbox-gallery bg-light pb0 type1 container whtbg">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center title">
@@ -204,15 +232,13 @@
 
     </section>
 
-    <section class="type1">
-        <div class="overlay">
-            <div class="background-overlay overlay_opacity_15" style="background-image: url(images/bg_who.jpg);"></div>
-        </div>
+    <section class="lightbox-gallery bg-light pb0 type1 " style="padding-bottom: 30px">
+
         <div class="who_we_are">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-center title">
-                        <h2 class="white">تحميل التطبيق </h2>
+                        <h2 >تحميل التطبيق </h2>
                         <div class="underline"><i class="fa fa-circle-thin"></i></div>
                     </div>
                 </div>
@@ -227,7 +253,7 @@
                         </div>
                         <div class="col-sm-6" style="text-align: center;">
                             <a href="{{$seo->ios_app_link}}">
-                                <i class="fa fa-apple fa-5x" style="color:white; font-size: 8em !important;"
+                                <i class="fa fa-apple fa-5x" style="color:black; font-size: 8em !important;"
                                    aria-hidden="true"></i>
                             </a>
                         </div>
@@ -239,35 +265,6 @@
         </div>
     </section>
 
-    <section>
-        <div class="overlay"></div>
-        <div class="background-overlay" style="background-image: url('{{url('public/images/fact_bg.jpg')}}');"></div>
-        <div id="facts">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-md-6 col-sm-6 col-xs-6 col-12 text-center">
-                        <div class="fact-item">
-                            <div class="fact-number" data-count="414">
-                                <div class="icon-happy"></div>
-                                <h3 class="fact-desc">عملاء سعداء</h3>
-                                <div class="count-focus">414</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-6 col-12 text-center">
-                        <div class="fact-item">
-                            <div class="fact-number" data-count="543">
-                                <div class="icon-trophy"></div>
-                                <h3 class="fact-desc">خدمات تم انجازها</h3>
-                                <div class="count-focus">543</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
 
 @endsection

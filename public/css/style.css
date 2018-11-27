@@ -45,8 +45,17 @@ theme.
 @import url(https://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
 
 html, body, form, fieldset, table, tr, td, h1, h2, h3, h4, h5, p,
-.text, .main-menu, .text-uppercase, .breadcrumb, .wl-team-descrip {
+.text, .main-menu, .text-uppercase, .breadcrumb, .wl-team-descrip, .txt_black {
     font-family: 'Droid Arabic Kufi', serif !important;
+}
+
+.txt_black {
+    color: #1a2226 !important;
+
+}
+
+.whtbg {
+    background-color: white !important;
 }
 
 html {
@@ -326,7 +335,7 @@ blockquote:before {
 4. Backgrounds and sections
 ============================== */
 .bg-light {
-    background: #f9f9f9;
+    background: #f8f8f8cc;
 }
 
 section {
@@ -4678,10 +4687,11 @@ label {
 26. Footer
 ============================== */
 .footer {
-    background: #222222;
+    background: rgb(210, 224, 228) none repeat scroll 0% 0% !important;
     padding: 60px 0;
     margin: 0 auto;
     text-align: center;
+    color: #1a2226 !important;
 }
 
 .footer-logo {
@@ -4808,13 +4818,14 @@ footer.type1 .footer {
 footer.type1 .footer .footer-contact h3 {
     font-family: 'Dosis', sans-serif;
     font-weight: 400;
-    color: #ffffff;
+    color: #1a2226;
     line-height: 15px;
-    letter-spacing: 2px;
-    text-align: left;
+    letter-spacing: 0px;
+    text-align: right;
     text-transform: capitalize;
     font-size: 20px;
     margin-bottom: 30px;
+    direction: rtl !important;
 }
 
 footer.type1 .footer .icon_box .icon span {
@@ -4839,21 +4850,24 @@ footer.type1 .footer .icon_box {
 }
 
 footer.type1 .footer .icon_box .info_holder {
-    color: #CECECE;
+    color: #1a2226;
     font-weight: 400;
     font-size: 11px;
-    font-family: 'Open Sans', sans-serif;
-    text-align: left;
+    font-family: 'Droid Arabic Kufi', sans-serif;
+    text-align: right;
+    direction: rtl !important;
+
 }
 
 footer.type1 .footer .icon_box .info_holder h4 {
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Droid Arabic Kufi', sans-serif;
     font-weight: 500;
     color: #EE220C;
     line-height: 15px;
-    letter-spacing: 2px;
-    text-align: left;
+    letter-spacing: 0px;
+    text-align: right;
     font-weight: bold;
+    direction: rtl;
 }
 
 footer.type1 .footer .icon_box a {
@@ -5030,7 +5044,7 @@ footer.type1 .footer ul.recent_posts li img {
 }
 
 footer.type1 .copyright {
-    background: #111111;
+    background: #d2e0e4;
     color: #666666;
     padding: 15px 0;
     font-weight: 400;
@@ -5039,6 +5053,7 @@ footer.type1 .copyright {
     text-transform: uppercase;
     z-index: 3;
     position: relative;
+    border-top: 1px #1a2226 solid;
 }
 
 footer.type1 .copyright p {

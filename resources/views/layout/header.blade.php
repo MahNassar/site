@@ -13,25 +13,25 @@
 
                 <nav class="primary_menu">
                     <ul class="main-menu">
-                        <li class="active scroll has-child">
+                        <li class="{{Request::is('/') ? 'active' : ''}} scroll has-child">
                             <a href="{{url('/')}}" title="">الرئيسيه</a>
                         </li>
 
-                        <li class="scroll has-child">
+                        <li class="{{Request::is('about*') ? 'active' : ''}} scroll has-child">
                             <a href="{{url('about')}}" title="">عن الشركه</a>
                         </li>
-                        <li class="scroll has-child">
+                        <li class="{{Request::is('services*') ? 'active' : ''}} scroll has-child">
                             <a href="{{url('services')}}">خدماتنا</a>
                         </li>
 
-                        <li class="scroll has-child">
+                        <li class="{{Request::is('contact*') ? 'active' : ''}} scroll has-child">
                             <a href="{{url('contact')}}">اتصل بنا</a>
                         </li>
-                        <li class="scroll has-child">
+                        <li class="{{Request::is('blog*') ? 'active' : ''}} scroll has-child">
                             <a href="{{url('blog')}}">اخر الاخبار</a>
                         </li>
 
-                        <li class="scroll has-child">
+                        <li class="{{Request::is('team*') ? 'active' : ''}} scroll has-child">
                             <a href="{{url('team')}}">فريق العمل</a>
                         </li>
 

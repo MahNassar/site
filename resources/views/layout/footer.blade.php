@@ -37,14 +37,8 @@
                 </div>
 
 
-
                 <div class="col-md-4 col-sm-4">
-                    <div class="footer-contact">
-                        <h3>الفيس بوك</h3>
-                        <ul class="recent_posts" style="margin-left: -70px">
 
-                        </ul>
-                    </div>
                 </div>
 
                 <div class="col-md-4 col-sm-4">
@@ -61,7 +55,6 @@
 
                     </div>
                 </div>
-
 
 
             </div>
