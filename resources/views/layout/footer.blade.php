@@ -29,7 +29,7 @@
                             <div class="icon"><span class="ion-android-mail"></span></div>
                             <div class="info_holder">
                                 <h4>البريد الالكترونى</h4>
-                                <h4>info@feed.com</h4>
+                                info@feed.com
                             </div>
                         </div>
 
