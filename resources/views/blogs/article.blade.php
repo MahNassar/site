@@ -3,14 +3,15 @@
 @section('content')
     <section class="page_section nopadding">
         <div class="overlay">
-            <div class="background-overlay overlay_opacity_15 overlay_grayscale" style="background-image: url('{{url('public/images/blog/' . $article->image)}}');">
+            <div class="background-overlay overlay_opacity_15 overlay_grayscale"
+                 style="background-image: url('{{url('public/images/blog/' . $article->image)}}');">
             </div>
         </div>
         <div class="page-header text-center">
             <div class="table">
                 <div class="inner">
                     <div class="page-header-content">
-                        <h1 class="page-header-title wow fadeInUp" data-wow-delay="0.10s">Blog</h1>
+                        <h1 class="page-header-title wow fadeInUp" data-wow-delay="0.10s">اخر اخبارنا </h1>
                         <h2 class="page-header-subtitle wow fadeInUp" data-wow-delay="0.20s">
                             {{$article->abstract}}
                         </h2>
@@ -20,8 +21,8 @@
             </div>
 
             <ol class="breadcrumb">
-                <li><a href="{{url('/')}}">Home</a></li>
-                <li class="active">Blog</li>
+                <li><a href="{{url('/')}}">الرئيسيه</a></li>
+                <li class="active">اخر الاخبار</li>
             </ol>
         </div>
     </section>
@@ -37,7 +38,7 @@
                     <article class="entry-item">
                         <div class="entry-img">
                             <a href="blog-single.html">
-                                <img src="{{url('public/images/blog/' . $article->image)}}" alt="{{$article->title}}" />
+                                <img src="{{url('public/images/blog/' . $article->image)}}" alt="{{$article->title}}"/>
                             </a>
                         </div>
 
@@ -51,9 +52,7 @@
                                         <i class="fa fa-clock-o"></i>
                                           {{$article->created_at}}
                                       </span>
-                                      <span class="entry-author">
-                                        <i class="fa fa-user"></i>EMS
-                                      </span>
+
                                 </div>
                             </div>
                             <div class="entry-content">

@@ -26,7 +26,6 @@ class Project extends Model
     public $table = 'projects';
     public $fillable = [
         'title',
-        'description',
         'images'
     ];
     protected $dates = ['deleted_at'];

@@ -20,6 +20,8 @@
 Route::get('/', ['as' => 'Home', 'uses' => 'MainController@home']);
 
 Route::get('/about', 'AboutController@getAbout');
+Route::get('/team', 'MainController@getTeam');
+Route::get('/careers', 'MainController@getCareers');
 Route::get('/products', 'ProductController@getProducts');
 Route::get('/products/{id}', 'ProductController@getProduct');
 Route::get('/inquire_order', 'OrderController@order');
@@ -38,6 +40,7 @@ Route::post('quotes/user_quote', 'QuoteController@registerQuote');
 Auth::routes();
 Route::group(['middleware' => ['auth'], 'prefix' => 'admin'], function () {
     Route::get('/home', 'HomeController@index');
+    Route::get('/', 'HomeController@index');
 
     Route::get('generator_builder', '\InfyOm\GeneratorBuilder\Controllers\GeneratorBuilderController@builder');
 
@@ -69,6 +72,12 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin'], function () {
 
     Route::resource('seos', 'SeoController');
     Route::resource('videos', 'VideoController');
+
+    Route::resource('partners', 'partnersController');
+
+    Route::resource('clints', 'clintsController');
+
+    Route::resource('careers', 'careersController');
 });
 
 

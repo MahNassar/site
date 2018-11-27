@@ -13,7 +13,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Seo extends Model
 {
     public $table = 'seo';
-    
+
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
@@ -22,8 +22,8 @@ class Seo extends Model
 
 
     public $fillable = [
-        'meta_description',
-        'meta_keywords'
+        'meta_description', 'meta_keywords',
+        'title', 'android_app_link', 'ios_app_link', 'logo'
     ];
 
     /**
@@ -43,8 +43,8 @@ class Seo extends Model
      * @var array
      */
     public static $rules = [
-        
+
     ];
 
-    
+
 }

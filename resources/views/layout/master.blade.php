@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>FEED</title>
+    <title>Feed - فييد</title>
     <meta name="description" content="{{$seo->meta_description}}">
     <meta name="keywords" content="{{$seo->meta_keywords}}">
     <link href="https://fonts.googleapis.com/css?family=Dosis:400,200,300,500,600,700,800" rel="stylesheet"
@@ -33,8 +33,8 @@
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
             i[r] = i[r] || function () {
-                    (i[r].q = i[r].q || []).push(arguments)
-                }, i[r].l = 1 * new Date();
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
             a = s.createElement(o),
                 m = s.getElementsByTagName(o)[0];
             a.async = 1;
@@ -43,7 +43,9 @@
         })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
         ga('create', 'UA-75638957-2', 'auto');
         ga('send', 'pageview');
+
     </script>
+
 </head>
 <body class="appear-animate">
 
@@ -89,61 +91,39 @@
 <!--[if lt IE 10]>
 <script type="text/javascript" src="{{url('public/js/placeholder.js')}}"></script><![endif]-->
 
-<script>
-    function check() {
-        var name = $("#name").val();
-        var position = $("#position").val();
-        var quote = $("#quote").val();
 
-        if (name == "" || name == null) {
-            $('.name_required').show();
-            return false;
-        }else {
-            $('.name_required').hide();
-        }
-
-        if (position == "" || position == null) {
-            $('.position_required').show();
-            return false;
-        }else {
-            $('.position_required').hide();
-        }
-
-        if (quote == "" || quote == null) {
-            $('.quote_required').show();
-            return false;
-        }else {
-            $('.product_required').hide();
-        }
-
-        {{--$.post('{{url('/user_quote')}}', {--}}
-            {{--name: name,--}}
-            {{--position: position,--}}
-            {{--quote: quote,--}}
-        {{--}, function (data) {--}}
-            {{--location.reload();--}}
-
-        {{--});--}}
-    }
-</script>
 <!--================= End JS sctipts ==================-->
 <script>
     $('.owl-carousel').owlCarousel({
-        loop:true,
-        margin:10,
-        nav:true,
-        responsive:{
-            0:{
-                items:1
+        loop: true,
+        margin: 10,
+        nav: true,
+        responsive: {
+            0: {
+                items: 1
             },
-            600:{
-                items:1
+            600: {
+                items: 2
             },
-            1000:{
-                items:1
+            1000: {
+                items: 4
             }
         }
     })
+</script>
+
+<script>
+    var total_menu_items = $('#header.type1 .primary_menu > ul > li').length;  //Get the count of the all menu items
+    var half_position_even = total_menu_items / 2;   //If the count is even, just directly divide by 2
+    var half_position_odd = (total_menu_items - 1) / 2;   //If the count is odd, just adding 1 in order to make it to be an even, then divide by 2
+    var logo_html = '<li class="logo"><a href="/"><img src="{{url('public/images/partners/'.$seo->logo)}}" style="width: 80px !important;" alt="Feed" class="img-responsive mine-logo"/></a></li>'; //LOGO HTML
+    var ex = /^\d+$/;
+    if (ex.test(total_menu_items / 2)) {
+        $('#header.type1 .primary_menu > ul > li:nth-child(' + half_position_even + ')').after(logo_html);
+    } else {
+        $('#header.type1 .primary_menu > ul > li:nth-child(' + half_position_odd + ')').after(logo_html);
+    }
+
 </script>
 </body>
 </html>

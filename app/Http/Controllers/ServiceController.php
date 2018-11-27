@@ -60,7 +60,7 @@ class ServiceController extends AppBaseController
     {
         $input = $request->all();
         $image = $request->file('image');
-        if ($image){
+        if ($image) {
             $imageName = time() . '.' . $image->getClientOriginalExtension();
             $destinationPath = public_path('/images/services');
             $image->move($destinationPath, $imageName);
@@ -119,7 +119,7 @@ class ServiceController extends AppBaseController
     /**
      * Update the specified Service in storage.
      *
-     * @param  int              $id
+     * @param  int $id
      * @param UpdateServiceRequest $request
      *
      * @return Response
@@ -135,14 +135,13 @@ class ServiceController extends AppBaseController
         }
         $input = $request->all();
         $image = $request->file('image');
-        if ($image){
+        if ($image) {
             $imageName = time() . '.' . $image->getClientOriginalExtension();
             $destinationPath = public_path('/images/services');
             $image->move($destinationPath, $imageName);
             $photo = $imageName;
             $input['image'] = $photo;
         }
-
 
 
         $service = $this->serviceRepository->update($input, $id);
@@ -178,7 +177,7 @@ class ServiceController extends AppBaseController
 
     public function getServices(Request $request)
     {
-        $allServices = Service::orderBy('id')->take(3)->get();
+        $allServices = Service::orderBy('id')->get();
         return view('services.allservices')
             ->with('services', $allServices);
     }

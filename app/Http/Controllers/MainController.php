@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\careers;
+use App\Models\clints;
+use App\Models\partners;
 use App\Models\Product;
 use App\Models\Project;
 use App\Models\Quote;
@@ -18,27 +21,22 @@ class MainController extends Controller
     {
 
         $sliders = Slider::where('isActive', 1)->orderBy('id')->get();
-        $products = Product::orderBy('id')->take(3)->get();
+        $products = Product::orderBy('id')->get();
         $members = Team::orderBy('id')->take(4)->get();
-        $testimonials = Quote::where('isActive', 1)->orderBy('id')->get();
-        $testimonials_count = Quote::where([
-            ['ip', \Request::ip()]
-        ])->count();
-        if ($testimonials_count > 0) {
-            $qoutes = true;
-        } else {
-            $qoutes = false;
-        }
-        $projects = Project::orderBy('id')->take(3)->get();
-        $servives = Service::orderBy('id')->take(3)->get();
+
+        $projects = Project::orderBy('id')->get();
+        $servives = Service::orderBy('id')->get();
+        $partners = partners::all();
+        $clients = clints::all();
+
         return view('index', [
             'sliders' => $sliders,
             'products' => $products,
             'members' => $members,
-            'testimonials' => $testimonials,
             'projects' => $projects,
             'servives' => $servives,
-            'qoutes' => $qoutes
+            'partners' => $partners,
+            'clients' => $clients,
         ]);
     }
 
@@ -49,6 +47,24 @@ class MainController extends Controller
 
     public function sendMail()
     {
+
+    }
+
+    public function getTeam()
+    {
+        $members = Team::orderBy('id')->get();
+        return view('website.team', [
+            'members' => $members,
+        ]);
+
+    }
+
+    public function getCareers()
+    {
+        $careers = careers::orderBy('id')->get();
+        return view('website.careers', [
+            'careers' => $careers,
+        ]);
 
     }
 }

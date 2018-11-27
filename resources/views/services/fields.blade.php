@@ -1,10 +1,4 @@
 <!-- Type Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('type', 'Type:') !!}
-    {!! Form::select('type', array('production' => 'production',
-        'quality_control' => 'quality_control',
-        'logistics' => 'logistics'), '', ['class'=>'form-control']) !!}
-</div>
 
 <!-- Title Field -->
 <div class="form-group col-sm-6">
@@ -13,10 +7,6 @@
 </div>
 
 <!-- Abstract Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('abstract', 'Abstract:') !!}
-    {!! Form::text('abstract', null, ['class' => 'form-control', 'maxlength'=>100]) !!}
-</div>
 
 <!-- Description Field -->
 <div class="form-group col-sm-12 col-lg-12">

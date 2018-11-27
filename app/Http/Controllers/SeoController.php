@@ -107,7 +107,7 @@ class SeoController extends AppBaseController
     /**
      * Update the specified Seo in storage.
      *
-     * @param  int              $id
+     * @param  int $id
      * @param UpdateSeoRequest $request
      *
      * @return Response
@@ -122,7 +122,17 @@ class SeoController extends AppBaseController
             return redirect(route('seos.index'));
         }
 
-        $seo = $this->seoRepository->update($request->all(), $id);
+        $input = $request->all();
+        $image = $request->file('logo');
+        if ($image) {
+            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            $destinationPath = public_path('/images/partners');
+            $image->move($destinationPath, $imageName);
+            $photo = $imageName;
+            $input['logo'] = $photo;
+        }
+
+        $seo = $this->seoRepository->update($input, $id);
 
         Flash::success('Seo updated successfully.');
 
