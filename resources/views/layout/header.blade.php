@@ -7,7 +7,7 @@
                        href="tel:19635">19635</a>
                 </div>
 
-                <div class=" col-sm-3 col-xs-12">
+                <div class=" col-sm-3 col-xs-12 search-inp">
                     <input class="form-control " type="text" style="text-align: right"
                            placeholder="إبحث  "
                            aria-label="Search">

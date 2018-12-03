@@ -276,7 +276,7 @@
 
 
 
-    <section class="lightbox-gallery bg-light pb0 type1 whtbg" style="padding-bottom: 30px;height: 360px;">
+    <section class="lightbox-gallery bg-light pb0 type1 whtbg" style="padding-bottom: 30px">
 
 
         <div class=" background-overlay" style="background-image: url('{{url('public/images/dwback.png')}}');"></div>
@@ -290,9 +290,8 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
+                    <div class="col-sm-12">
                         <div class="col-sm-4" style="text-align: center;">
-
                             <a href="{{$seo->android_app_link}}">
                                 <img src="{{url('public/images/google.png')}}" class="responsive"
                                      style="max-width: 80% !important;">

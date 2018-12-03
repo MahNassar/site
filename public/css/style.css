@@ -153,6 +153,12 @@ ul {
     right: 0%;
 }
 
+@media screen and (max-width: 480px) {
+    .search-inp {
+        display: none;
+    }
+}
+
 /* ==============================
 2. Typography
 ============================== */
