@@ -100,13 +100,30 @@
         nav: true,
         responsive: {
             0: {
+                items: 2
+            },
+            600: {
+                items: 4
+            },
+            1000: {
+                items: 8
+            }
+        }
+    })
+
+    $('.xyz').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        responsive: {
+            0: {
                 items: 1
             },
             600: {
-                items: 2
+                items: 1
             },
             1000: {
-                items: 4
+                items: 1
             }
         }
     })
@@ -116,13 +133,14 @@
     var total_menu_items = $('#header.type1 .primary_menu > ul > li').length;  //Get the count of the all menu items
     var half_position_even = total_menu_items / 2;   //If the count is even, just directly divide by 2
     var half_position_odd = (total_menu_items - 1) / 2;   //If the count is odd, just adding 1 in order to make it to be an even, then divide by 2
-    var logo_html = '<li class="logo"><a href="/"><img src="{{url('public/images/partners/'.$seo->logo)}}" style="width: 80px !important;" alt="Feed" class="img-responsive mine-logo"/></a></li>'; //LOGO HTML
+    var logo_html = '<li class="logo"><a href="/"><img src="{{url('public/images/partners/'.$seo->logo)}}" alt="Feed" class="img-responsive mine-logo"/></a></li>'; //LOGO HTML
     var ex = /^\d+$/;
     if (ex.test(total_menu_items / 2)) {
         $('#header.type1 .primary_menu > ul > li:nth-child(' + half_position_even + ')').after(logo_html);
     } else {
         $('#header.type1 .primary_menu > ul > li:nth-child(' + half_position_odd + ')').after(logo_html);
     }
+
 
 </script>
 </body>

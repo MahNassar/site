@@ -33,7 +33,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center title">
-                    <h2>Team member</h2>
+                    <h2>فريق العمل</h2>
                     <div class="underline"><i class="fa fa-circle-thin"></i></div>
                 </div>
             </div>

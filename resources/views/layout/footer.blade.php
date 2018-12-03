@@ -5,8 +5,19 @@
     <div class="footer">
         <div class="container">
             <div class="row">
-
                 <div class="col-md-4 col-sm-4">
+                    <h3 style="font-weight: 400;color: #fff;line-height: 15px;letter-spacing: 0px;text-transform: capitalize;font-size: 20px;margin-bottom: 30px;direction: rtl !important;">
+                        تابعنا على</h3>
+
+                    <div class="social-icons">
+                        <a href="#"><i class="fa fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa fa-youtube-play"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+
                     <div class="footer-contact">
                         <h3>معلومات التواصل</h3>
                         <div class="icon_box">
@@ -36,11 +47,6 @@
                     </div>
                 </div>
 
-
-                <div class="col-md-4 col-sm-4">
-
-                </div>
-
                 <div class="col-md-4 col-sm-4">
                     <div class="footer-contact">
                         <h3>روابط مهمه</h3>
@@ -63,14 +69,8 @@
     <div class="copyright">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                    <p>Copyright&nbsp;©&nbsp;2018. feed.com.co</p>
-                </div>
-                <div class="col-md-6">
-                    <div class="social-icons pull-right">
-                        <a href="#" target="_blank"><i class="ion-social-youtube" style="font-size: 25px;"></i></a>
-                        <a href="#" target="_blank"><i class="ion-social-facebook-outline" style="font-size: 25px;"></i></a>
-                    </div>
+                <div class="col-md-12">
+                    <p class="white" style="text-align: center">Copyright&nbsp;©&nbsp;2018. feed.com.co</p>
                 </div>
             </div>
         </div>

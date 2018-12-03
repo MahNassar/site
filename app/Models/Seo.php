@@ -23,7 +23,7 @@ class Seo extends Model
 
     public $fillable = [
         'meta_description', 'meta_keywords',
-        'title', 'android_app_link', 'ios_app_link', 'logo'
+        'title', 'android_app_link', 'ios_app_link', 'logo', 'count_client', 'count_services'
     ];
 
     /**

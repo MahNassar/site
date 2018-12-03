@@ -15,8 +15,8 @@
     "laravelcollective/html": "^5.3.0",
     "infyomlabs/adminlte-templates": "5.3.x-dev",
     "doctrine/dbal": "~2.3",
-    "infyomlabs/generator-builder": "dev-master"
-
+    "infyomlabs/generator-builder": "dev-master",
+    "jonasva/laravel-facebook-insights": "dev-master"
   },
   "require-dev": {
     "fzaninotto/faker": "~1.4",

@@ -36,7 +36,7 @@
                 <div class="col-md-12">
                     <div class="about-desc">
                         <h2>{{$about->company_name}}</h2>
-                        <p>
+                        <p class="inner_page">
                             {{$about->company_info}}
                         </p>
                     </div>

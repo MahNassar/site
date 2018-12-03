@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Models\careers;
 use App\Models\clints;
 use App\Models\partners;
@@ -12,7 +13,6 @@ use App\Models\Service;
 use App\Models\Slider;
 use App\Models\Team;
 use Illuminate\Http\Request;
-
 
 class MainController extends Controller
 {
